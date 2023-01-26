@@ -78,6 +78,7 @@ Objective of ASIC Design : To take the design from register transfer level and i
  Physical Verifications:
    * Design Rule Checking (DRC)
    * Layout vs. Schematics (LVS)
+ 
  Timing Verifications:
    * Static Timing Analysis (STA)
 
