@@ -126,5 +126,15 @@ Design Preparation :
  
  Required Folder Structures are created:
  ![image](https://user-images.githubusercontent.com/123591219/214924022-9ca2b691-4dc0-4a27-857a-26e980864825.png)
+ 
+ Results Directory contains the directories for all the stages of the flow and the Reports Directory contains the timing reports once the STA stage is done. config.tcl file contains all the default values during run and the default values can be modified based on the requirement.
+ 
 
-
+Design Synthesis :
+ 
+STEP 1: Synthesis is the first step for OpenLANE Flow. 
+ 
+Command: run_synthesis
+ 
+ 
+ 
