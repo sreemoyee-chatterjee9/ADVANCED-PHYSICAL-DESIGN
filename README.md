@@ -94,4 +94,7 @@ Following Figure illustrates the basic default flow; this is what runs in the ba
 ![image](https://user-images.githubusercontent.com/123591219/214880192-3e18a0fb-0f73-4935-aa56-e95eeca6ad75.png)
 
 OpenLane is based on different open source framework tools to perform each of the steps:
+<EXCEL Data Goes here>
 
+ 
+###Open Source EDA Tools
