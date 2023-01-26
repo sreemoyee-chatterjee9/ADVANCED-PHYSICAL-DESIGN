@@ -106,10 +106,10 @@ Command:
  <pre>docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6</pre>
  alias : docker
 
-To initiate the flow, we need to run <pre>./flow.tcl</pre>
-To run the step by step flow, we need to enable <pre>interactive mode</pre> as OpenLANE is a fully automated tool and invoking it without interactive mode will cause the run of the full RTL2GDSII Flow.
+To initiate the flow, we need to run ./flow.tcl.
+To run the step by step flow, we need to enable interactive mode as OpenLANE is a fully automated tool and invoking it without interactive mode will cause the run of the full RTL2GDSII Flow.
 
-![image](https://user-images.githubusercontent.com/123591219/214917634-8d8b563f-fdc8-43a0-91c9-87f3db354920.png)
+![image](https://user-images.githubusercontent.com/123591219/214917959-b885718f-2187-4903-900d-8cac2acb4549.png)
 
 
 
