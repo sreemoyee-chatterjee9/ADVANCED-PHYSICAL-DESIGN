@@ -13,4 +13,6 @@ FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC
 We are focusing on the implementation of the logic functions, which comes within the Processor/SoC.
 ![image](https://user-images.githubusercontent.com/123591219/214771306-559acf6d-4dcb-4743-a274-a571e5870d68.png)
 
+Chip Package: Packages are empty vessels into which the bare chip is placed. Tiny wires connect the leads on the package with the leads on the chip. Pin Location of the package are driven by ARUDINO Board that we are trying to design. Following is the example of QFN 48 PIN Package.
+![image](https://user-images.githubusercontent.com/123591219/214785082-dbd84edf-5380-42d1-b306-95a9707722e0.png)
 
