@@ -74,5 +74,12 @@ Objective of ASIC Design : To take the design from register transfer level and i
 3. Placement : Placement of gate level netlist cells on the vertical rows. Cell placement is done in two steps Global and Detailed. Global placement finds the optimal placement of core cells. During Detailed placements, the placements done in Global placement are minimally altered.
 4. Clock Tree Synthesis : Routing of the clocks by creating the distribution network with minimum skew and minimum latency.
 5. Route : Signal Routing. During this stage, the interconnects get implemented using available metal layers. During each routing, the PDK defines the thickness, tracks, pitch, minimum width of each of the metal layers. The mental tracks form the routing grid. Routing is also dont in two steps: Global and Detailed Routing. Global Routing to create the routing guide and Detailed Routing to create the actual wiring. 
+6. SignOff : Once Routing is done, we can construct the final layout which undergoes the verifications. Following are the types of verifications:
+Physical Verifications:
+* Design Rule Checking (DRC)
+* Layout vs. Schematics (LVS)
+Timing Verifications:
+* Static Timing Analysis (STA)
 
-
+OpenLANE
+OpenLANE is a tape-out-hardened flow that addresses two main use cases: hardening a macro and integrating a System-on-a-Chip (SoC). It was used successfully to tape out a family of RISC-V based SoCs known as “striVe”. This paper reviews the various components of the flow with a particular focus on the challenges that faced SoC integration while working on the first of the striVe chips and the main ideas used to overcome them, achieving full automation.
