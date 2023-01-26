@@ -99,5 +99,20 @@ OpenLane is based on different open source framework tools to perform each of th
  
 ## Open Source EDA Tool \[OpenLANE\]
  We will be using OpenLANE as our EDA Tool and for PDK, which we will be using, is SKY130nm. OpenLANE is build around this PDK.
- <pre>sky130_fd_sc_hd --> \<PDK_Tool_Name\>_\<Foundry_Name\>_\<Standard_Cell\>_\<High_Density\></pre>
+ <pre>sky130_fd_sc_hd --> (PDK_Tool_Name)_(Foundry_Name)_(Standard_Cell)_(High_Density)</pre>
+ 
+To invoke the Tool:
+Command:
+ <pre>docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6<\pre>
+ alias : docker
+
+To initiate the flow, we need to run <pre>./flow.tcl</pre>
+To run the step by step flow, we need to enable <pre>interactive mode</pre> as OpenLANE is a fully automated tool and invoking it without interactive mode will cause the run of the full RTL2GDSII Flow.
+
+![image](https://user-images.githubusercontent.com/123591219/214917634-8d8b563f-fdc8-43a0-91c9-87f3db354920.png)
+
+
+
+
+
  
