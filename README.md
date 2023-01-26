@@ -136,5 +136,17 @@ STEP 1: Synthesis is the first step for OpenLANE Flow.
  
 Command: run_synthesis
  
+Task 1:
+
+Find the Flop Ratio :
+ 
+Number of Cells = 14876
+Number of D-FF(sky130_fd_sc_hd__dfxtp_2) = 1613
+Hence, Flop Coount = 1613/14876 = 0.1084 :: 10.84%
+
+![image](https://user-images.githubusercontent.com/123591219/214929528-28cb9db0-0a90-40f5-a0de-3a1808a1081e.png)
+ 
+
+
  
  
