@@ -80,7 +80,7 @@ Objective of ASIC Design : To take the design from register transfer level and i
    * Layout vs. Schematics (LVS)
  Timing Verifications:
    * Static Timing Analysis (STA)
-<\pre>
+</pre>
 
 OpenLANE
 OpenLANE is a tape-out-hardened flow that addresses two main use cases: hardening a macro and integrating a System-on-a-Chip (SoC). It was used successfully to tape out a family of RISC-V based SoCs known as “striVe”. This paper reviews the various components of the flow with a particular focus on the challenges that faced SoC integration while working on the first of the striVe chips and the main ideas used to overcome them, achieving full automation.
