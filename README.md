@@ -123,4 +123,8 @@ Design Preparation :
  
  prep -design picorv32a
  ![image](https://user-images.githubusercontent.com/123591219/214923431-e07ed188-32f7-4bf4-b2ee-991d9152516e.png)
+ 
+ Required Folder Structures are created:
+ ![image](https://user-images.githubusercontent.com/123591219/214924022-9ca2b691-4dc0-4a27-857a-26e980864825.png)
+
 
