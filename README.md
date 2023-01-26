@@ -53,3 +53,12 @@ RTL Implementations : It is needed to understand the hardware specific instructi
 ![image](https://user-images.githubusercontent.com/123591219/214855726-eb9770e6-dcfe-4c56-a0f0-4d27f2f4ca82.png)
 
 
+SoC Design Using OpenLANE
+For Digital ASIC Design, we need following components:
+RTL IPs : Hardware Description Language of the fuctions
+EDA Tools/CAD Tools : Use for electronic design automation
+PDK Data : Process Design Kits. It is the interface between the FAB and the Designers. PDK contains the files of Process Design Rules, Digital Standard Cell Libraries. I/O Libraries.
+Following are some open sources for Digital ASIC Design:
+![image](https://user-images.githubusercontent.com/123591219/214861680-5ff9002a-e4eb-452f-b5a3-f0ac29b6fa22.png)
+
+
