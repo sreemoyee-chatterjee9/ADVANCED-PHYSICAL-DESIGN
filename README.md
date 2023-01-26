@@ -177,6 +177,8 @@ Aspect Ratio = Height/Width
  
  Define Locations of PrePlaced Cells
 
- - Combinational Logics are divided into blocks.
+ - Combinational Logics are divided into blocks and the blocks get implemented independently.
  
  ![image](https://user-images.githubusercontent.com/123591219/214939772-c2988746-6eeb-47c8-baf7-54dd52853bc6.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/214941168-5758c2d6-f9ac-472c-b8bc-2189ec317b45.png)
