@@ -97,4 +97,6 @@ OpenLane is based on different open source framework tools to perform each of th
 <EXCEL Data Goes here>
 
  
-### Open Source EDA Tools
+## Open Source EDA Tool \[OpenLANE\]
+ We will be using OpenLANE as our EDA Tool and for PDK, which we will be using, is SKY130nm. OpenLANE is build around this PDK.
+ 
