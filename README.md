@@ -103,7 +103,7 @@ OpenLane is based on different open source framework tools to perform each of th
  
 To invoke the Tool:
 Command:
- <pre>docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6<\pre>
+ <pre>docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6</pre>
  alias : docker
 
 To initiate the flow, we need to run <pre>./flow.tcl</pre>
