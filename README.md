@@ -182,3 +182,13 @@ Aspect Ratio = Height/Width
  ![image](https://user-images.githubusercontent.com/123591219/214939772-c2988746-6eeb-47c8-baf7-54dd52853bc6.png)
 
  ![image](https://user-images.githubusercontent.com/123591219/214941168-5758c2d6-f9ac-472c-b8bc-2189ec317b45.png)
+
+ Following are the components, that can be implemented once and instantiated multiple times as per requirements:
+ 
+ Memory, Clock-Gating Cells, Comparator, MUX
+ 
+ - The arrangements of these IP's in a chip is referred to as Floor-Planning.
+ 
+ - These IP's have user-defined locations, and they are placed on the chip before automated placement and routing, hence, called pre-placed cells.
+ 
+ 
