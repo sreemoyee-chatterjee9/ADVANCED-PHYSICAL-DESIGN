@@ -19,7 +19,7 @@ Packages are empty vessels into which the bare chip is placed. Tiny wires connec
 ![image](https://user-images.githubusercontent.com/123591219/214792447-edf8fe49-895e-45d7-8d79-127c49dc1b0f.png)
 
 The Chip sitting inside the package consists of various components.
-* <pre>PADS : Through pads, the signals can be sent inside/outside of the chip. They are intermediate structures connecting internal signals from the core of the integrated circuit to the external pins of the chip package.</pre>
-* <pre>DIE  : Die is the complete chip which gets manufactured on the silicon wafer. It is the square of silicon containing an integrated circuit that has been cut out of the wafer, on which the given functional circuit is fabricated.</pre>
-* <pre>Core : Core is the section of the chip where the fundamental logic of the design is placed.</pre>
+* PADS : Through pads, the signals can be sent inside/outside of the chip. They are intermediate structures connecting internal signals from the core of the integrated circuit to the external pins of the chip package.
+* DIE  : Die is the complete chip which gets manufactured on the silicon wafer. It is the square of silicon containing an integrated circuit that has been cut out of the wafer, on which the given functional circuit is fabricated.
+* Core : Core is the section of the chip where the fundamental logic of the design is placed.
 
