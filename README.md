@@ -45,6 +45,11 @@ Software Application Execution on Hardware \[Layout\]:
 ![image](https://user-images.githubusercontent.com/123591219/214851823-2a65ea02-ccc5-4b87-a455-6c1bd71dd460.png)
 
 Instructions that come from the compiler is called abstract interface, which performs its job as interface between the software programming language and hardware. These set of instructiions are called "Instruction Set of Architechture"/"Architechture of Computer". 
-Example : 
-<pre> add x6, x10, x6
+ 
+<pre>Example : add x6, x10, x6
 After conversion to Binary ------> 00000000011001010000001100110011 </pre>
+
+RTL Implementations : It is needed to understand the hardware specific instructions. Then that RTL instruction gets synthesized into netlist which contains the Gates and other logic components. Then Viw physic design implementation, the instruction input gets implemented into hardware.
+![image](https://user-images.githubusercontent.com/123591219/214855726-eb9770e6-dcfe-4c56-a0f0-4d27f2f4ca82.png)
+
+
