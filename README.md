@@ -173,3 +173,10 @@ Utilization Factor = (Area Occupied by the Netlist)/(Total Area of the Core)
 Aspect Ratio = Height/Width
 
 ![image](https://user-images.githubusercontent.com/123591219/214937815-d0d15b51-59ff-40af-b06d-e817928395c9.png)
+
+ 
+ Define Locations of PrePlaced Cells
+
+ - Combinational Logics are divided into blocks.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/214939772-c2988746-6eeb-47c8-baf7-54dd52853bc6.png)
