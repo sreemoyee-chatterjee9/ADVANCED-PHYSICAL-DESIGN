@@ -14,7 +14,8 @@ We are focusing on the implementation of the logic functions, which comes within
 ![image](https://user-images.githubusercontent.com/123591219/214771306-559acf6d-4dcb-4743-a274-a571e5870d68.png)
 
 **Chip Package:**
-Packages are empty vessels into which the bare chip is placed. Tiny wires connect the leads on the package with the leads on the chip. Pin Location of the package are driven by ARUDINO Board that we are trying to design. Following is the example of QFN 48 PIN Package \[7mm X 7mm\]:
 
-![image](https://user-images.githubusercontent.com/123591219/214786054-a7a653d2-3fa8-41e0-94e2-77d6e6d11491.png)
+Packages are empty vessels into which the bare chip is placed. Tiny wires connect the leads on the package with the leads on the chip. Pin Location of the package are driven by ARUDINO Board that we are trying to design. The Chip at the center of the package. All the input signals coming from the outside will be trasferred to the chip via the wire connection. Following is the example of QFN 48 PIN Package \[7mm X 7mm\]:
+
+![image](https://user-images.githubusercontent.com/123591219/214787742-0846ae2d-8f67-4bd8-a026-4d87aa5577b4.png)
 
