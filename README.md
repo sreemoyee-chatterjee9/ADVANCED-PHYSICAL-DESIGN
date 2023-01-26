@@ -112,7 +112,15 @@ To run the step by step flow, we need to enable interactive mode as OpenLANE is 
 ![image](https://user-images.githubusercontent.com/123591219/214917959-b885718f-2187-4903-900d-8cac2acb4549.png)
 
 
+Design Preparation :
+ To import all the packages that are required to run this flow:
+ ![image](https://user-images.githubusercontent.com/123591219/214920942-e819989e-db85-434a-b4a9-6f94e0e1363e.png)
 
-
-
+ All the designsd are extracted from the folder mentioned below:
+ /work/tools/openlane_working_dir/openlane/designs/
  
+ Design Setup Stage:
+ 
+ prep -design picorv32a
+ ![image](https://user-images.githubusercontent.com/123591219/214923431-e07ed188-32f7-4bf4-b2ee-991d9152516e.png)
+
