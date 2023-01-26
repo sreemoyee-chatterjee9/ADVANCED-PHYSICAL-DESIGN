@@ -99,5 +99,5 @@ OpenLane is based on different open source framework tools to perform each of th
  
 ## Open Source EDA Tool \[OpenLANE\]
  We will be using OpenLANE as our EDA Tool and for PDK, which we will be using, is SKY130nm. OpenLANE is build around this PDK.
- <pre>sky130_fd_sc_hd --> <PDK_Tool_Name>_<Foundry_Name>_<Standard_Cell>_<High_Density></pre>
+ <pre>sky130_fd_sc_hd --> \<PDK_Tool_Name\>_\<Foundry_Name\>_\<Standard_Cell\>_\<High_Density\></pre>
  
