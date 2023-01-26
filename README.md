@@ -30,3 +30,13 @@ All the devices are dependent on Foundry. It is a place where the Chip actually 
 MACROS :
 RISCV SOC, SPI these are the digital blocks which are called Macros.
 ![image](https://user-images.githubusercontent.com/123591219/214797116-7103d9d9-03f7-492a-b751-bbb51c848ada.png)
+
+
+RISCV Instruction Set Architechture (ISA) :
+ISA serves as the boundary between software and hardware. If we want to run a program on the hardware i.e. the layout of the chip then we need to go through a flow to parse the information.
+Step 1 : The program gets converted to a assembly language \[Hexa-decimal\].
+Step 2 : The Assembly language program gets converted into machine language program \[Binary Format\].
+Step 3 : Machine Language program gets executed on the Hardware \[Layout\].
+Interface : RISCV ISA needs to be implemented in RTL. Then the RTL2GDS Flow gets executed to run the required program on Layout.
+![image](https://user-images.githubusercontent.com/123591219/214822197-b91269ed-1bed-4c28-92a2-3cecbc6d4de1.png)
+
