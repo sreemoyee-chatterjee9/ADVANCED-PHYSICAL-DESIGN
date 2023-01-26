@@ -88,3 +88,6 @@ OpenLANE is a tape-out-hardened flow that addresses two main use cases: hardenin
 Following Figure illustrates the basic default flow; this is what runs in the batch (non-interactive) mode. Most of the steps are configurable and custom flows can be created by the use of interactive scripts. The flow expects the design source HDL files as an input as well as the desired PDK source files. 
 
 ![image](https://user-images.githubusercontent.com/123591219/214880192-3e18a0fb-0f73-4935-aa56-e95eeca6ad75.png)
+
+OpenLane is based on different open source framework tools to perform each of the steps:
+
