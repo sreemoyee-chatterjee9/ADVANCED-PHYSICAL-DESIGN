@@ -321,3 +321,18 @@ Netlist binding and initial place design
  For routing, we need to include some properties. The routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins. Routing is related to library characterization step.
  
  
+Floor planning Process for Congestion :
+
+The first phase in the physical design process is floorplanning. The primary goal of floorplanning is to determine the best position for each module on the layout surface based on interconnectivity. One key check to make while selecting the locations is that there should be no overlap between two modules. At the floorplan stage, the designer decides the size of the die and constructs wire tracks for typical cell arrangement. A power ground connection is made, and the position of the 1/0 pad/pin is determined.
+ 
+ Placement in OpenLANE occurs in two steps:
+ 
+ 1. Global Placement; \[Objective : To reduce the wire-length. Half Parameter Wire Length (HPWL)\]
+ 
+ 2. Detailed Placement;
+ 
+ Output of the placement : 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215134393-ecc5907c-bfd0-49d2-b42d-2886bdec4df7.png)
+
+ 
