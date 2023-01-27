@@ -278,3 +278,15 @@ Steps to run floorplan using OpenLANE
 
  
  
+Netlist binding and initial place design
+ 
+- Library contains the dimensions and the timing (delay) informations of each of the cells and the required operation condition of each of the cells. It stores all the flavors of each and every cell. 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215111810-97cfd30e-2e1f-41df-92c8-21448c6564f4.png)
+
+ 
+ After forming the proper dimentions to the cells, the next step is to place the cells on the floor plan.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215112305-8f78de8a-f65e-4821-b5ed-bc4fcd478fb1.png)
+
+ 
