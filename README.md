@@ -381,6 +381,21 @@ The different dimensions of the cells affect the thresold voltage and other comp
  
  ![image](https://user-images.githubusercontent.com/123591219/215151527-ff483a43-8552-4ce4-9c4c-9c2efa7341d1.png)
 
+ 
+ The output of the circuit design is Circuit Description Language [CDP].
+ 
+ 
  - Layout Design
+ 
+ Step 1 : Implement the function into MOS Transistor.
+ 
+ Step 2 : Derivation PMOS and NMOS Network Graph. Euler's Path & Stick Diagram.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215158028-251bcc2d-4f91-48a5-a624-44ce6513d4e4.png)
+
+ 
+ - Characterization 
+ 
  
  
