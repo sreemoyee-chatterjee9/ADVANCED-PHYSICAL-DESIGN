@@ -430,4 +430,14 @@ The different dimensions of the cells affect the thresold voltage and other comp
  ![image](https://user-images.githubusercontent.com/123591219/215166253-1c5e0521-7dd4-4c32-80ff-4320dcc59889.png)
 
  
+ - Propagation Delay
  
+ ![image](https://user-images.githubusercontent.com/123591219/215169483-3012b200-8583-479a-9d67-79c635d6f313.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/215169931-feff302e-3624-41a2-a2c0-e515994bedb9.png)
+
+ Negative Delay is not expected. The reason of negative delay is poor choice of thresold point.
+ 
+ If the length of the wire between the cells are larger, then the slew will be higher. 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215171315-9da9742a-77db-44ab-8a2d-8b35e33b9d93.png)
