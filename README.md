@@ -192,3 +192,21 @@ Aspect Ratio = Height/Width
  - These IP's have user-defined locations, and they are placed on the chip before automated placement and routing, hence, called pre-placed cells.
  
  
+ De-coupling Capacitors 
+ 
+ Pre-Placed cells are surrounded by the de-coupling capacitors. A decoupling capacitor, also referred to as a bypass capacitor, acts as a kind of energy reservoir. When a decoupling capacitor is in place, it will do one of two things:
+ 
+ 1. If the input voltage drops, then a decoupling capacitor will be able to provide enough power to an IC to keep the voltage stable.
+ 
+ 2. If the voltage increases, then a decoupling capacitor will be able to absorb the excess energy trying to flow through to the IC, which again keeps the voltage stable.
+ 
+Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and ground. It's not uncommon to use two or more different-valued, even different types of capacitors to bypass the power supply, because some capacitor values will be better than others at filtering out certain frequencies of noise.
+
+![image](https://user-images.githubusercontent.com/123591219/215056984-2cd3faed-7bf6-47e2-be74-b8e017be96e6.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215057008-a2ce247c-ef9d-4889-9816-c0d8f3359f2c.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215057032-134373d7-145e-4a93-a529-66f81593a4aa.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215057048-3e2ce250-b4d0-426f-9bc0-bcdb0a6f2cd0.png)
+
