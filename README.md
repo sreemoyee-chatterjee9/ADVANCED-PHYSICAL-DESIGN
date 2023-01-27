@@ -452,3 +452,19 @@ The different dimensions of the cells affect the thresold voltage and other comp
  I/O Placer : One of the open source of EDA Tool which helps to place the I/Os on the Core.
  FP_IO_MODE`  | Decides the mode of the random IO placement option. 0=matching mode, 1=random equidistant mode <br> (Default: `1`)
  
+ 
+ When IO mode is set to 2 instead of 1, we observe the following changes. The pins are not equidistant.
+ 
+ set ::env(FP_IO_MODE) 2
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215182567-f67490b5-e269-408a-867d-feefb437b5bf.png)
+ 
+ 
+ 
+ SPICE Simulations:
+ 
+ 
+ Step 1 : Create the SPICE Deck \[Connectivity information about the netlist\]
+ ![image](https://user-images.githubusercontent.com/123591219/215184890-4375c524-49bc-4250-a7ac-216c485fa4d4.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/215186582-8f34bf32-2414-4b11-9d51-fb2bbb5053a4.png)
