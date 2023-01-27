@@ -441,3 +441,12 @@ The different dimensions of the cells affect the thresold voltage and other comp
  If the length of the wire between the cells are larger, then the slew will be higher. 
  
  ![image](https://user-images.githubusercontent.com/123591219/215171315-9da9742a-77db-44ab-8a2d-8b35e33b9d93.png)
+ 
+ 
+ ## Day 3 : Design library cell using Magic Layout and ngspice characterization
+ 
+ 
+ Labs for CMOS inverter ngspice simulations
+ 
+ 
+ 
