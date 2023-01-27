@@ -335,4 +335,6 @@ The first phase in the physical design process is floorplanning. The primary goa
  
  ![image](https://user-images.githubusercontent.com/123591219/215134393-ecc5907c-bfd0-49d2-b42d-2886bdec4df7.png)
 
+ ![image](https://user-images.githubusercontent.com/123591219/215135346-42d9a8c0-3fe6-4498-bf6c-e5f2fe128d33.png)
  
+ ![image](https://user-images.githubusercontent.com/123591219/215135911-cf373067-45b4-458b-a651-b34f89248b28.png)
