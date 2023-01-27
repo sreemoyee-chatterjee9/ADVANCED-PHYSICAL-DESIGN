@@ -338,3 +338,31 @@ The first phase in the physical design process is floorplanning. The primary goa
  ![image](https://user-images.githubusercontent.com/123591219/215135346-42d9a8c0-3fe6-4498-bf6c-e5f2fe128d33.png)
  
  ![image](https://user-images.githubusercontent.com/123591219/215135911-cf373067-45b4-458b-a651-b34f89248b28.png)
+ 
+ 
+ Post Floor-Plan and Post CTS, Power Distribution Flow is executed.
+ 
+ 
+ 
+Cell design and characterization flows
+ 
+The different dimensions of the cells affect the thresold voltage and other components of the cells. Library consists of different cells with differenct dimensions and different functionalities. 
+ 
+ Cell Design Flow has three stages:
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215145971-1dc1754d-466a-412a-b65a-91864cc01041.png)
+
+ 
+ Input : Process Deign Kit (PDK)
+ 
+ - DRC and LVS Rules:
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215146468-476ea80f-1255-4430-bd7f-a5790e71db7f.png)
+ 
+ - SPICE MODEL :
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215146650-9ecbcbc2-c39e-425c-893d-cd46abb1e8c5.png)
+
+ 
+ - 
+ The difference between power rail and ground rail defines the Cell Height.
