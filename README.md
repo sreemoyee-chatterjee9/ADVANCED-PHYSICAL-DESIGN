@@ -211,7 +211,7 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
 ![image](https://user-images.githubusercontent.com/123591219/215057048-3e2ce250-b4d0-426f-9bc0-bcdb0a6f2cd0.png)
 
 
-## Power Planning 
+Power Planning 
 
 ![image](https://user-images.githubusercontent.com/123591219/215076874-60be390d-cd0c-4b29-8889-eaa9b7258a35.png)
 
@@ -221,3 +221,43 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
  
 ![image](https://user-images.githubusercontent.com/123591219/215077845-9f45cf2c-7825-4d76-b540-da7ea19559cb.png)
 
+
+Pin and Logical Placement
+
+The netlist pins gets implemented on the chip.
+
+![image](https://user-images.githubusercontent.com/123591219/215080124-6ea11ef4-9348-4c7c-94ee-b6a8c98e31e5.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215080417-f4f23b72-9e66-4acf-b668-a796e31a8906.png)
+
+
+
+Steps to run floorplan using OpenLANE
+
+ Floor Planning can be done using following command.
+ <pre>run_floorplan</pre>
+ 
+ The final configuration file that is taken for consideration is :
+ 
+ /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl
+ 
+ As an output, .def file gets generated:
+ 
+ /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-01_18-58/results/floorplan/picorv32a.floorplan.def
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215092262-418f67de-30d2-4739-878f-2b510bb737ca.png)
+
+ 1 Micron = 1000 Data Bits Units
+ Area of the chip = ( 660685000 micro-meter X 671405000 micro-meter ) 
+ 
+ To visualize the layout after floor plan, following command can be used to load the layout with magic tool with the input parameters : lef and def files
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215095430-6e2dc491-52f0-4939-bc7e-e76fee4d2609.png)
+
+ picorv32a Topmount Cell in the Window
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215096989-804dd748-1948-41d9-8b73-19b64063f285.png)
+ 
+ Equidisantant Input Ports :
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215097923-1138f88b-04b7-48a9-bd1d-7bd8799751b0.png)
