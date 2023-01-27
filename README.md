@@ -292,3 +292,32 @@ Netlist binding and initial place design
  Repeater : A repeater is a buffer which has an input receiver and a driver or transmitter to resend a cleaned up version of the signal which was received. Repeaters are widely used to combat the quadratic delay of long on-chip wires. A conventional repeater is a CMOS inverter placed periodically along the long wire. This design has two drawbacks. The wire must have an even number of repeaters to preserve signal polarity. This forces the designer to sometimes use a suboptimal number of repeaters. It is also awkward when a wire branches because repeaters must be placed in such a way that all branches have an even number of repeaters. The second drawback is that many repeaters are required. For floorplanning reasons, repeaters tend to be grouped into “gas stations” which may not be immediately under the best wire route. Thus, longer wires are required to reach the gas stations. To deal with these problems, some designers have constructed repeaters from pairs of inverters. This automatically solves the polarity problem. Moreover, it may lead to fewer repeaters along the wire, since each repeater has lower input capacitance and higher output drive. This reduces the number of gas stations and extra routing required. Unfortunately, buffers are inherently slower than repeaters. This document explores the use of buffers as repeaters. It comes to a remarkably elegant conclusion showing that “optimal” buffer repeaters” are only slightly slower than “optimal” inverter repeaters.
  
  Data Slew Analysis: Slew is dependent on the value of the capacitor. The higher the value of the capacitor, the amount of charge, required to charge the capacitor will be high and the slew will be even bad.
+
+ Optimized Placement :
+ ![image](https://user-images.githubusercontent.com/123591219/215120522-b076b064-20b4-4200-97c7-575d39ad8695.png)
+
+ 
+ 
+ Need for libraries and characterization :
+ 
+ Step 1 : Logic Synthesis (Conversion of functionality to hardware)
+ 
+ This is an arrangement of Gates that will represent the original functionality, described by RTL.
+ 
+ Step 2 : Floor Planning
+ 
+ The output of logic synthesis is imported, and the size of the core and the die is decided based on that. Hence, the dimension of the core and die is dependent on the dimension of the output cells of the logic synthesis. 
+ 
+ Step 3 : Placement
+ 
+ Logic Cells are placed on the Core such that initial timing is closed. 
+ 
+ Step 4 : Clock Tree Synthesis (CTS)
+ 
+ Here, the target is to have clocks having zero skew, to receive the clock at each cell at exact same time. Clock Buffers are added to have equal rise-fall time.
+ 
+ Step 5 : Routing
+ 
+ For routing, we need to include some properties. The routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins. Routing is related to library characterization step.
+ 
+ 
