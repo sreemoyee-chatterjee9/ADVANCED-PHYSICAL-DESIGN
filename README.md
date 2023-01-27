@@ -425,3 +425,9 @@ The different dimensions of the cells affect the thresold voltage and other comp
  - Noise Characterization;
  
  
+ ![image](https://user-images.githubusercontent.com/123591219/215166014-4c7be1ee-0771-4190-afb9-27ee0dcb76f4.png)
+ ![image](https://user-images.githubusercontent.com/123591219/215166202-9d261aeb-80cf-43fb-a679-3939160be575.png)
+ ![image](https://user-images.githubusercontent.com/123591219/215166253-1c5e0521-7dd4-4c32-80ff-4320dcc59889.png)
+
+ 
+ 
