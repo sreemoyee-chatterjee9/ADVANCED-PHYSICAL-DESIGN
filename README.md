@@ -477,5 +477,6 @@ The different dimensions of the cells affect the thresold voltage and other comp
 The switching threshold, Vm, is defined as the point where Vin = Vout. Switching threshold can be set by the ratio of relative driving strengths of the PMOS and NMOS transistors. To move Vm upwards, a larger value of ratio is required, which means making the PMOS wider. Increasing the strength of the NMOS, on the other hand, moves the switching threshold closer to GND. The effect of changing the Wp/Wn ratio is to shift the transient region of the VTC. Increasing the width of the PMOS or the NMOS moves VM towards VDD or GND respectively. This property can be very useful, as asymmetrical transfer characteristics are actually desirable in some designs.
  
 ![image](https://user-images.githubusercontent.com/123591219/215192275-08fe9211-f8ea-4e00-8b04-45103d2a1614.png)
+![image](https://user-images.githubusercontent.com/123591219/215192833-55e57ea2-9087-45e8-ac86-6fb6ed04edda.png)
 
  
