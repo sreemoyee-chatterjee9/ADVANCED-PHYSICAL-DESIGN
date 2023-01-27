@@ -262,8 +262,19 @@ Steps to run floorplan using OpenLANE
  
  ![image](https://user-images.githubusercontent.com/123591219/215097923-1138f88b-04b7-48a9-bd1d-7bd8799751b0.png)
 
- To know which layer we are in:
+ To know which layer we are in: (Metal Layer 3, which we set in horizontal metal in configuration file)
  
  ![image](https://user-images.githubusercontent.com/123591219/215098502-fed25763-2b97-4434-a5a2-ed099e76f8bf.png)
+ 
+ The Vertical Metal Layer is as follows: (Metal Layer 2)
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215104238-e07cf04a-499b-4261-8ea8-86210be25278.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/215107556-4d33f1f0-d2a1-4843-b0db-9e178e299d06.png)
+
+ 
+ Floorplan does not take into consideration the placement of standerd cell. But standerd cells are already present in the floor plan as shown below:
+ ![image](https://user-images.githubusercontent.com/123591219/215108286-f08153da-8707-4687-aaba-06279fdeae96.png)
+
  
  
