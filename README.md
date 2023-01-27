@@ -449,4 +449,6 @@ The different dimensions of the cells affect the thresold voltage and other comp
  Labs for CMOS inverter ngspice simulations
  
  
+ I/O Placer : One of the open source of EDA Tool which helps to place the I/Os on the Core.
+ FP_IO_MODE`  | Decides the mode of the random IO placement option. 0=matching mode, 1=random equidistant mode <br> (Default: `1`)
  
