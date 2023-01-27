@@ -210,3 +210,14 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
 
 ![image](https://user-images.githubusercontent.com/123591219/215057048-3e2ce250-b4d0-426f-9bc0-bcdb0a6f2cd0.png)
 
+
+## Power Planning 
+
+![image](https://user-images.githubusercontent.com/123591219/215076874-60be390d-cd0c-4b29-8889-eaa9b7258a35.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215077464-78de599f-f1d4-43a8-9cd5-9a3cf9c7566f.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215077682-8a071e1b-75f4-482f-b627-b030a6f06509.png)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215077845-9f45cf2c-7825-4d76-b540-da7ea19559cb.png)
+
