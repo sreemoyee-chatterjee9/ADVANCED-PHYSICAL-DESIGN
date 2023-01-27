@@ -480,3 +480,20 @@ The switching threshold, Vm, is defined as the point where Vin = Vout. Switching
 ![image](https://user-images.githubusercontent.com/123591219/215192833-55e57ea2-9087-45e8-ac86-6fb6ed04edda.png)
 
  
+Lab steps to git clone vsdstdcelldesign
+ 
+ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+ cd /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+ 
+ <pre>cp /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs\.tech/magic/sky130A.tech /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/.</pre>
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215199317-d0d4ddae-bc72-4369-b250-a38f3d7fb638.png)
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215199592-86a637a7-6757-469c-be36-fc8d66ce94d6.png)
+
+ 
+ 
+
