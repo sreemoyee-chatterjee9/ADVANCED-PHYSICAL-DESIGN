@@ -397,5 +397,31 @@ The different dimensions of the cells affect the thresold voltage and other comp
  
  - Characterization 
  
+ Step 1 : Read the models and tech files from the layout.
+ 
+ Step 2 : Read the extracted SPICE Netlist.
+ 
+ Step 3 : Define the behavior of the buffer.
+ 
+ Step 4 : Read the sub-circuits of the inverters.
+ 
+ Step 5 : Add the necessary power sources.
+ 
+ Step 6 : Apply the stimulus.
+ 
+ Step 7 : Provide necessary capacitances.
+ 
+ Step 8 : Provide the necessary simulation command.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215161086-121cf306-be27-4699-9513-97ea32692a05.png)
+ 
+ 
+ Characterization Software is GUNA where provide all this inputs and the output will be timing, noise, power libs and functions.
+ 
+ We have three types of characterizations.
+ - Timing Characterization;
+ - Power Characterization;
+ - Noise Characterization;
  
  
