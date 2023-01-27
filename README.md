@@ -465,6 +465,17 @@ The different dimensions of the cells affect the thresold voltage and other comp
  
  
  Step 1 : Create the SPICE Deck \[Connectivity information about the netlist\]
+ 
  ![image](https://user-images.githubusercontent.com/123591219/215184890-4375c524-49bc-4250-a7ac-216c485fa4d4.png)
 
  ![image](https://user-images.githubusercontent.com/123591219/215186582-8f34bf32-2414-4b11-9d51-fb2bbb5053a4.png)
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215188152-2281a631-b3c2-45e6-b3ff-2662281ecce0.png)
+
+ Switching Thresold : 
+ 
+The switching threshold, Vm, is defined as the point where Vin = Vout. Switching threshold can be set by the ratio of relative driving strengths of the PMOS and NMOS transistors. To move Vm upwards, a larger value of ratio is required, which means making the PMOS wider. Increasing the strength of the NMOS, on the other hand, moves the switching threshold closer to GND. The effect of changing the Wp/Wn ratio is to shift the transient region of the VTC. Increasing the width of the PMOS or the NMOS moves VM towards VDD or GND respectively. This property can be very useful, as asymmetrical transfer characteristics are actually desirable in some designs.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215191701-f0074a47-8363-40a8-ba0a-1d6dfc3e29f9.png)
+
+ 
