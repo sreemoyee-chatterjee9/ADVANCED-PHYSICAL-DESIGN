@@ -261,3 +261,9 @@ Steps to run floorplan using OpenLANE
  Equidisantant Input Ports :
  
  ![image](https://user-images.githubusercontent.com/123591219/215097923-1138f88b-04b7-48a9-bd1d-7bd8799751b0.png)
+
+ To know which layer we are in:
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215098502-fed25763-2b97-4434-a5a2-ed099e76f8bf.png)
+ 
+ 
