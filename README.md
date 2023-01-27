@@ -355,7 +355,7 @@ The different dimensions of the cells affect the thresold voltage and other comp
  
  Input : Process Deign Kit (PDK)
  
- - DRC and LVS Rules:
+ - DRC and LVS Rules :
  
  ![image](https://user-images.githubusercontent.com/123591219/215146468-476ea80f-1255-4430-bd7f-a5790e71db7f.png)
  
@@ -364,5 +364,23 @@ The different dimensions of the cells affect the thresold voltage and other comp
  ![image](https://user-images.githubusercontent.com/123591219/215146650-9ecbcbc2-c39e-425c-893d-cd46abb1e8c5.png)
 
  
- - 
- The difference between power rail and ground rail defines the Cell Height.
+ - Library and User Defined Specs :
+ 
+ The difference between power rail and ground rail defines the Cell Height and it is the responsibility of the libraby operator to maintain this height. Cell width is dependent on the timing information, which depends on drive-strength specification. Top Level Designer determines the supply voltage and noise margin needs to be taken care based on that.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215150232-f431aabf-0bf7-4d2c-bd91-97a7789d99b7.png)
+
+ 
+ Design Steps
+ 
+ - Circuit Design
+ 
+ Step 1 : Implement the function.
+ 
+ Step 2 : Model the p-mos and n-mos function to meet the library model requirement.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215151527-ff483a43-8552-4ce4-9c4c-9c2efa7341d1.png)
+
+ - Layout Design
+ 
+ 
