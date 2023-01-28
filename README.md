@@ -554,4 +554,6 @@ Lab steps to git clone vsdstdcelldesign
  ![image](https://user-images.githubusercontent.com/123591219/215268832-f8ba7b43-393d-4395-8257-b6c596ba1b6b.png)
 
  
- Width of the standard cell should be 
+ Width of the standard cell should be odd multiples of the "x" pitch.
+ 
+ 
