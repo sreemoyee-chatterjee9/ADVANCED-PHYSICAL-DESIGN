@@ -503,3 +503,11 @@ Lab steps to git clone vsdstdcelldesign
  ![image](https://user-images.githubusercontent.com/123591219/215255690-e59d6e94-ed3f-47bc-9808-415e89ab6a5a.png)
 
  ![image](https://user-images.githubusercontent.com/123591219/215255647-709957de-343a-4e02-a970-1c4ff726882a.png)
+
+ 
+ 
+ Lab steps to characterize inverter using sky130 model files
+ 
+ Rise Time : 2.24537e-09 - 2.17978e-09 = 6.559e-11 second = 0.06559 nanosecond
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215258574-8c0cd1a0-a53a-4de3-b4cc-a501d4116d79.png)
