@@ -618,5 +618,3 @@ Lab steps to git clone vsdstdcelldesign
  set ::env(SYNTH_STRATEGY) 1
  
  set ::env(SYNTH_SIZING) 1
- 
- 
