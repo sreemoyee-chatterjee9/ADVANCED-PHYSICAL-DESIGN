@@ -628,9 +628,24 @@ Lab steps to git clone vsdstdcelldesign
  
  ![image](https://user-images.githubusercontent.com/123591219/215289090-270ab1f1-3dfc-4c80-998a-5267a8f770d6.png)
 
+
+ Version Issue ::
  
+ ![image](https://user-images.githubusercontent.com/123591219/215289561-f26fdf5b-3f52-48d6-bb23-c2e165f3c8a9.png)
+
  
  Timing analysis with ideal clocks using openSTA
  
  
+ ![image](https://user-images.githubusercontent.com/123591219/215289376-24040c2e-3980-43ad-9437-808df83373e7.png)
+
  
+ Lab steps to configure OpenSTA for post-synth timing analysis
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215291843-ce888e31-5d44-4971-9a01-6573d4b106f6.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/215291865-d9be6dd9-fcc6-46a5-b307-72391c12b06d.png)
+
+ OUTPUT : command:: ![image](https://user-images.githubusercontent.com/123591219/215291925-2d455199-ce14-474f-98fc-16bdf23f28ae.png)
+
+ ![image](https://user-images.githubusercontent.com/123591219/215291949-169dd418-6f5c-449d-a6fa-5b81cfdbae81.png)
