@@ -508,6 +508,18 @@ Lab steps to git clone vsdstdcelldesign
  
  Lab steps to characterize inverter using sky130 model files
  
- Rise Time : 2.24537e-09 - 2.17978e-09 = 6.559e-11 second = 0.06559 nanosecond
+ SPICE PLOT ::
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
+
+ 
+ Rise Transition Time [From 20% to 80%] : 2.24537e-09 - 2.17978e-09 = 6.559e-11 second = 0.06559 nanosecond
  
  ![image](https://user-images.githubusercontent.com/123591219/215258574-8c0cd1a0-a53a-4de3-b4cc-a501d4116d79.png)
+ 
+ Fall Transition Time [From 80% to 20%] : 4.09486e-09 - 4.05256e-09 = 0.0423e-09 second = 0.0423 nanosecond
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215259509-64c62028-d7a4-45fb-be26-f03cb06931b0.png)
+
+ 
+ 
