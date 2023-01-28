@@ -522,4 +522,14 @@ Lab steps to git clone vsdstdcelldesign
  ![image](https://user-images.githubusercontent.com/123591219/215259509-64c62028-d7a4-45fb-be26-f03cb06931b0.png)
 
  
+ Cell Rise Delay [50% of the rise]: Output - Input = 2.21073e-09 - 2.14994e-09 = 0.06079e-09 second = 0.06079 nanosecond
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215260049-e694af89-71d2-4533-96bb-e0ae5c14b13b.png)
+
+ 
+ Cell Fall Delay [50% of the fall]: 4.07758e-09 - 4.04994e-09 = 0.02764e-09 second = 0.02764 nanosecond
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215260226-69ac6213-4fec-48d2-89d5-c4425c95c4ac.png)
+
+ 
  
