@@ -618,3 +618,19 @@ Lab steps to git clone vsdstdcelldesign
  set ::env(SYNTH_STRATEGY) 1
  
  set ::env(SYNTH_SIZING) 1
+ 
+ 
+ We have plugged in out custom cell in the openlane flow:
+  
+ ![image](https://user-images.githubusercontent.com/123591219/215288866-9fba097d-c93d-46f4-a932-f00a2aaa6f3e.png)
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215288989-751c00b7-048b-471d-a803-789ea8b0d58d.png)
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215289090-270ab1f1-3dfc-4c80-998a-5267a8f770d6.png)
+
+ 
+ 
+ Timing analysis with ideal clocks using openSTA
+ 
+ 
+ 
