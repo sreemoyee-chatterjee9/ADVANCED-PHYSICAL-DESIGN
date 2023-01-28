@@ -508,6 +508,12 @@ Lab steps to git clone vsdstdcelldesign
  
  Lab steps to characterize inverter using sky130 model files
  
+ 
+ Modified .spice file for the inverter:
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215261266-c05de58c-53d2-43be-9ae6-2752b9212116.png)
+
+ 
  SPICE PLOT ::
  
  ![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
@@ -531,5 +537,6 @@ Lab steps to git clone vsdstdcelldesign
  
  ![image](https://user-images.githubusercontent.com/123591219/215260226-69ac6213-4fec-48d2-89d5-c4425c95c4ac.png)
 
+ 
  
  
