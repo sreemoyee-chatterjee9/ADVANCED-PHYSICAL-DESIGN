@@ -540,3 +540,13 @@ Lab steps to git clone vsdstdcelldesign
  
  
  
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+ 
+ Objective : To extract .lef file from .mag file.
+ 
+ tracks.info : Contains the information which is required during routing. It has the information about the metal layers. This describes where we want our routes to go.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215268539-f3cf290f-b72b-4619-b257-59a4ceace790.png)
+
+ 
+ 
