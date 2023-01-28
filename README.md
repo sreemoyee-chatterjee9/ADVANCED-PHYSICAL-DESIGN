@@ -547,6 +547,6 @@ Lab steps to git clone vsdstdcelldesign
  tracks.info : Contains the information which is required during routing. It has the information about the metal layers. This describes where we want our routes to go.
  
  ![image](https://user-images.githubusercontent.com/123591219/215268539-f3cf290f-b72b-4619-b257-59a4ceace790.png)
-
  
  
+ ![image](https://user-images.githubusercontent.com/123591219/215268832-f8ba7b43-393d-4395-8257-b6c596ba1b6b.png)
