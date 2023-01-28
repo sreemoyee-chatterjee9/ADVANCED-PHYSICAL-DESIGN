@@ -562,5 +562,19 @@ Lab steps to git clone vsdstdcelldesign
  ![image](https://user-images.githubusercontent.com/123591219/215279638-f258e360-79f2-4f8a-ba88-bc520bfc4c8c.png)
 
 
-![image](https://user-images.githubusercontent.com/123591219/215279670-58ab5895-9b10-401c-bc72-16649f7ef3d7.png)
+ ![image](https://user-images.githubusercontent.com/123591219/215279670-58ab5895-9b10-401c-bc72-16649f7ef3d7.png)
+ 
+ 
+ To Plug-in the custom .lef file into the flow following steps needs to be followed:
+ 
+ set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+ add_lefs -src $lefs
+ run_synthesis
+ 
+ 
+ Custom .lef file : 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215283701-9e28b9fc-3d09-4c8a-be42-41aa310a1991.png)
+ ![image](https://user-images.githubusercontent.com/123591219/215283812-6d85090e-f952-4d3b-b60a-f8e950daa5d2.png)
 
+  
