@@ -568,13 +568,55 @@ Lab steps to git clone vsdstdcelldesign
  To Plug-in the custom .lef file into the flow following steps needs to be followed:
  
  set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+ 
  add_lefs -src $lefs
+ 
  run_synthesis
  
  
- Custom .lef file : 
+ Custom .lef file with custom config.tcl file : 
  
  ![image](https://user-images.githubusercontent.com/123591219/215283701-9e28b9fc-3d09-4c8a-be42-41aa310a1991.png)
+ 
+ 
  ![image](https://user-images.githubusercontent.com/123591219/215283812-6d85090e-f952-4d3b-b60a-f8e950daa5d2.png)
 
   
+ 
+ Introduction to delay tables
+ 
+ 
+ Power Aware CTS:
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215285566-4e7c59ec-ee10-461d-9799-0b3fa8679bf9.png)
+ 
+ 
+ Lab steps to configure synthesis settings to fix slack and include vsdinv
+ 
+ Before :: Chip area for module '\picorv32a': 147712.918400
+ 
+ tns -711.59
+ 
+ wns -23.89
+ 
+ % echo $::env(SYNTH_BUFFERING)
+ 
+ 1
+ 
+ % echo $::env(SYNTH_SIZING)
+ 
+ 0
+
+ % echo $::env(SYNTH_DRIVING_CELL)
+ 
+ sky130_fd_sc_hd__inv_8
+
+ 
+ Modifying SYNTH_STRATEGY to 2 from 1
+ 
+ set ::env(SYNTH_STRATEGY) 1
+ 
+ set ::env(SYNTH_SIZING) 1
+ 
+ 
