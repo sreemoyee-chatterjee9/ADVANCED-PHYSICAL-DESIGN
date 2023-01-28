@@ -557,3 +557,10 @@ Lab steps to git clone vsdstdcelldesign
  Width of the standard cell should be odd multiples of the "x" pitch.
  
  
+ Command to extract .lef file :
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215279638-f258e360-79f2-4f8a-ba88-bc520bfc4c8c.png)
+
+
+![image](https://user-images.githubusercontent.com/123591219/215279670-58ab5895-9b10-401c-bc72-16649f7ef3d7.png)
+
