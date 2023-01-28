@@ -514,6 +514,8 @@ Lab steps to git clone vsdstdcelldesign
  ![image](https://user-images.githubusercontent.com/123591219/215261266-c05de58c-53d2-43be-9ae6-2752b9212116.png)
 
  
+ Command : ngspice sky130_inv.spice
+ 
  SPICE PLOT ::
  
  ![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
@@ -550,3 +552,6 @@ Lab steps to git clone vsdstdcelldesign
  
  
  ![image](https://user-images.githubusercontent.com/123591219/215268832-f8ba7b43-393d-4395-8257-b6c596ba1b6b.png)
+
+ 
+ Width of the standard cell should be 
