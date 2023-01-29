@@ -550,49 +550,49 @@ We have three types of characterizations.
 ![image](https://user-images.githubusercontent.com/123591219/215166253-1c5e0521-7dd4-4c32-80ff-4320dcc59889.png)
 
  
- - Propagation Delay
+- Propagation Delay
  
- ![image](https://user-images.githubusercontent.com/123591219/215169483-3012b200-8583-479a-9d67-79c635d6f313.png)
+![image](https://user-images.githubusercontent.com/123591219/215169483-3012b200-8583-479a-9d67-79c635d6f313.png)
 
- ![image](https://user-images.githubusercontent.com/123591219/215169931-feff302e-3624-41a2-a2c0-e515994bedb9.png)
+![image](https://user-images.githubusercontent.com/123591219/215169931-feff302e-3624-41a2-a2c0-e515994bedb9.png)
 
- Negative Delay is not expected. The reason of negative delay is poor choice of thresold point.
+Negative Delay is not expected. The reason of negative delay is poor choice of thresold point.
  
- If the length of the wire between the cells are larger, then the slew will be higher. 
+If the length of the wire between the cells are larger, then the slew will be higher. 
  
- ![image](https://user-images.githubusercontent.com/123591219/215171315-9da9742a-77db-44ab-8a2d-8b35e33b9d93.png)
- 
- 
- ## Day 3 - Design library cell using Magic Layout and ngspice Characterization
+![image](https://user-images.githubusercontent.com/123591219/215171315-9da9742a-77db-44ab-8a2d-8b35e33b9d93.png)
  
  
- Labs for CMOS inverter ngspice simulations
+## Day 3 - Design library cell using Magic Layout and ngspice Characterization
  
  
- I/O Placer : One of the open source of EDA Tool which helps to place the I/Os on the Core.
- FP_IO_MODE`  | Decides the mode of the random IO placement option. 0=matching mode, 1=random equidistant mode <br> (Default: `1`)
+Labs for CMOS inverter ngspice simulations
  
  
- When IO mode is set to 2 instead of 1, we observe the following changes. The pins are not equidistant.
- 
- set ::env(FP_IO_MODE) 2
- 
- ![image](https://user-images.githubusercontent.com/123591219/215182567-f67490b5-e269-408a-867d-feefb437b5bf.png)
+**I/O Placer** : One of the open source of EDA Tool which helps to place the I/Os on the Core.
+<pre>FP_IO_MODE`  | Decides the mode of the random IO placement option. 0=matching mode, 1=random equidistant mode <br> (Default: `1`)</pre>
  
  
+When IO mode is set to 2 instead of 1, we observe the following changes. The pins are not equidistant.
  
- SPICE Simulations:
+<pre>set ::env(FP_IO_MODE) 2</pre>
+ 
+![image](https://user-images.githubusercontent.com/123591219/215182567-f67490b5-e269-408a-867d-feefb437b5bf.png)
  
  
- Step 1 : Create the SPICE Deck \[Connectivity information about the netlist\]
  
- ![image](https://user-images.githubusercontent.com/123591219/215184890-4375c524-49bc-4250-a7ac-216c485fa4d4.png)
+**SPICE Simulations** :
+ 
+ 
+Step 1 : Create the SPICE Deck \[Connectivity information about the netlist\]
+ 
+![image](https://user-images.githubusercontent.com/123591219/215184890-4375c524-49bc-4250-a7ac-216c485fa4d4.png)
 
- ![image](https://user-images.githubusercontent.com/123591219/215186582-8f34bf32-2414-4b11-9d51-fb2bbb5053a4.png)
+![image](https://user-images.githubusercontent.com/123591219/215186582-8f34bf32-2414-4b11-9d51-fb2bbb5053a4.png)
  
- ![image](https://user-images.githubusercontent.com/123591219/215188152-2281a631-b3c2-45e6-b3ff-2662281ecce0.png)
+![image](https://user-images.githubusercontent.com/123591219/215188152-2281a631-b3c2-45e6-b3ff-2662281ecce0.png)
 
- Switching Thresold : 
+Switching Thresold : 
  
 The switching threshold, Vm, is defined as the point where Vin = Vout. Switching threshold can be set by the ratio of relative driving strengths of the PMOS and NMOS transistors. To move Vm upwards, a larger value of ratio is required, which means making the PMOS wider. Increasing the strength of the NMOS, on the other hand, moves the switching threshold closer to GND. The effect of changing the Wp/Wn ratio is to shift the transient region of the VTC. Increasing the width of the PMOS or the NMOS moves VM towards VDD or GND respectively. This property can be very useful, as asymmetrical transfer characteristics are actually desirable in some designs.
  
@@ -600,43 +600,43 @@ The switching threshold, Vm, is defined as the point where Vin = Vout. Switching
 ![image](https://user-images.githubusercontent.com/123591219/215192833-55e57ea2-9087-45e8-ac86-6fb6ed04edda.png)
 
  
-Lab steps to git clone vsdstdcelldesign
+**Lab steps to git clone vsdstdcelldesign**
  
- git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
 
- cd /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+<pre>cd /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign</pre>
  
- <pre>cp /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs\.tech/magic/sky130A.tech /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/.</pre>
- 
- 
- ![image](https://user-images.githubusercontent.com/123591219/215199317-d0d4ddae-bc72-4369-b250-a38f3d7fb638.png)
+<pre>cp /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs\.tech/magic/sky130A.tech /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/.</pre>
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215199592-86a637a7-6757-469c-be36-fc8d66ce94d6.png)
-
+![image](https://user-images.githubusercontent.com/123591219/215199317-d0d4ddae-bc72-4369-b250-a38f3d7fb638.png)
  
- ![image](https://user-images.githubusercontent.com/123591219/215252347-72c037e7-f07a-43f6-886a-482ae5ffb201.png)
  
- ![image](https://user-images.githubusercontent.com/123591219/215252379-618b3eb8-cbc0-43e8-aec9-c9732f95c529.png)
+![image](https://user-images.githubusercontent.com/123591219/215199592-86a637a7-6757-469c-be36-fc8d66ce94d6.png)
 
  
- ![image](https://user-images.githubusercontent.com/123591219/215255690-e59d6e94-ed3f-47bc-9808-415e89ab6a5a.png)
-
- ![image](https://user-images.githubusercontent.com/123591219/215255647-709957de-343a-4e02-a970-1c4ff726882a.png)
-
+![image](https://user-images.githubusercontent.com/123591219/215252347-72c037e7-f07a-43f6-886a-482ae5ffb201.png)
  
- 
- Lab steps to characterize inverter using sky130 model files
- 
- 
- Modified .spice file for the inverter:
- 
- ![image](https://user-images.githubusercontent.com/123591219/215261266-c05de58c-53d2-43be-9ae6-2752b9212116.png)
+![image](https://user-images.githubusercontent.com/123591219/215252379-618b3eb8-cbc0-43e8-aec9-c9732f95c529.png)
 
  
- Command : ngspice sky130_inv.spice
+![image](https://user-images.githubusercontent.com/123591219/215255690-e59d6e94-ed3f-47bc-9808-415e89ab6a5a.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215255647-709957de-343a-4e02-a970-1c4ff726882a.png)
+
  
- SPICE PLOT ::
+ 
+**Lab steps to characterize inverter using sky130 model files**
+ 
+ 
+*Modified .spice file for the inverter*:
+ 
+![image](https://user-images.githubusercontent.com/123591219/215261266-c05de58c-53d2-43be-9ae6-2752b9212116.png)
+
+ 
+<pre>Command : ngspice sky130_inv.spice</pre>
+ 
+**SPICE PLOT ::**
  
  ![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
 
