@@ -46,26 +46,26 @@ The Chip sitting inside the package consists of various components.
 * **DIE**  : Die is the complete chip which gets manufactured on the silicon wafer. It is the square of silicon containing an integrated circuit that has been cut out of the wafer, on which the given functional circuit is fabricated.
 * **Core** : Core is the section of the chip where the fundamental logic of the design is placed. A Core typically consists of following components - SoC, SRAM, ADC/DAC, PLL, SPI.
 
-**Foundry IPs : **
+**Foundry IPs** :
 
 *IP = Intellectual Property*
+
 All the devices are dependent on Foundry. It is a place where the Chip actually get manufactured. Generally, fabrication industries(foundry) provide IPs such as standard cells, IO blocks, etc.. PLL, SRAM, ACD/DAC are some examples of foundry IPs. We communicate with IP with the interface files provided.
 
-**MACROS :**
+**MACROS** :
 
 RISCV SOC, SPI these are the digital blocks which are called Macros.
+
 ![image](https://user-images.githubusercontent.com/123591219/214797116-7103d9d9-03f7-492a-b751-bbb51c848ada.png)
 
 
-RISCV Instruction Set Architechture (ISA) :
+**RISCV Instruction Set Architechture (ISA)** :
 
 ISA serves as the boundary between software and hardware. If we want to run a program on the hardware i.e. the layout of the chip then we need to go through a flow to parse the information.
 
-Step 1 : The program gets converted to a assembly language \[Hexa-decimal\].
-
-Step 2 : The Assembly language program gets converted into machine language program \[Binary Format\].
-
-Step 3 : Machine Language program gets executed on the Hardware \[Layout\].
+- Step 1 : The program gets converted to a assembly language \[Hexa-decimal\].
+- Step 2 : The Assembly language program gets converted into machine language program \[Binary Format\].
+- Step 3 : Machine Language program gets executed on the Hardware \[Layout\].
 
 Interface : RISCV ISA needs to be implemented in RTL. Then the RTL2GDS Flow gets executed to run the required program on Layout.
 ![image](https://user-images.githubusercontent.com/123591219/214822197-b91269ed-1bed-4c28-92a2-3cecbc6d4de1.png)
