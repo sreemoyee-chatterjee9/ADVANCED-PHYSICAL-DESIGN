@@ -792,7 +792,9 @@ ROUTING ::
  
  13. WHAT DOES SETTING FP_IO_VMETAL SWITCH DO? Decides the metal layer on which only vertical IO pins are placed.
  
- 14. WHAT IS THE PRECEDENCE ORDER OF FLOORPLAN CONFIGURATION SETTING FOR A DESIGN? sky130A_sky130_fd_sc_hd_config.tcl > config.tcl > floorplan.tcl.
+ 14. WHAT IS THE PRECEDENCE ORDER OF FLOORPLAN CONFIGURATION SETTING FOR A DESIGN?
+ 
+     sky130A_sky130_fd_sc_hd_config.tcl > config.tcl > floorplan.tcl.
  
  15. A TYPICAL STANDARD CELL INSIDE A LIBRARY CAN HAVE : different functionality, different sizes, Different Vt.
  
