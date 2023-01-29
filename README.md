@@ -141,39 +141,47 @@ OpenLane is based on different open source framework tools to perform each of th
  <pre>sky130_fd_sc_hd --> (PDK_Tool_Name)_(Foundry_Name)_(Standard_Cell)_(High_Density)</pre>
  
 To invoke the Tool:
-Command:
+
+ Command:
+ 
  <pre>docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6</pre>
- alias : docker
+
+**alias : docker**
 
 To initiate the flow, we need to run ./flow.tcl.
+
 To run the step by step flow, we need to enable interactive mode as OpenLANE is a fully automated tool and invoking it without interactive mode will cause the run of the full RTL2GDSII Flow.
 
 ![image](https://user-images.githubusercontent.com/123591219/214917959-b885718f-2187-4903-900d-8cac2acb4549.png)
 
 
-Design Preparation :
- To import all the packages that are required to run this flow:
- ![image](https://user-images.githubusercontent.com/123591219/214920942-e819989e-db85-434a-b4a9-6f94e0e1363e.png)
+**Design Preparation** :
+To import all the packages that are required to run this flow:
 
- All the designsd are extracted from the folder mentioned below:
- /work/tools/openlane_working_dir/openlane/designs/
+![image](https://user-images.githubusercontent.com/123591219/214920942-e819989e-db85-434a-b4a9-6f94e0e1363e.png)
+
+All the designsd are extracted from the folder mentioned below:
+
+/work/tools/openlane_working_dir/openlane/designs/
  
- Design Setup Stage:
+**Design Setup Stage** :
  
- prep -design picorv32a
- ![image](https://user-images.githubusercontent.com/123591219/214923431-e07ed188-32f7-4bf4-b2ee-991d9152516e.png)
+prep -design picorv32a
+
+![image](https://user-images.githubusercontent.com/123591219/214923431-e07ed188-32f7-4bf4-b2ee-991d9152516e.png)
  
- Required Folder Structures are created:
- ![image](https://user-images.githubusercontent.com/123591219/214924022-9ca2b691-4dc0-4a27-857a-26e980864825.png)
+Required Folder Structures are created:
+
+![image](https://user-images.githubusercontent.com/123591219/214924022-9ca2b691-4dc0-4a27-857a-26e980864825.png)
  
- Results Directory contains the directories for all the stages of the flow and the Reports Directory contains the timing reports once the STA stage is done. config.tcl file contains all the default values during run and the default values can be modified based on the requirement.
+Results Directory contains the directories for all the stages of the flow and the Reports Directory contains the timing reports once the STA stage is done. config.tcl file contains all the default values during run and the default values can be modified based on the requirement.
  
 
-Design Synthesis :
+**Design Synthesis** :
  
-STEP 1: Synthesis is the first step for OpenLANE Flow. 
+Synthesis is the first step for OpenLANE Flow. 
  
-Command: run_synthesis
+<pre>Command: run_synthesis</pre>
  
 Task 1:
 
