@@ -732,4 +732,15 @@ ROUTING ::
  
  Intra-Layer Parallel and Inter-Layer Sequential Panel Routing :
  
+ 
  ![image](https://user-images.githubusercontent.com/123591219/215320365-27b85d45-2d14-4e40-ae2f-96a061501612.png)
+ 
+ 
+
+ Handling Connectivity:
+
+ - Access Point (AP): An on-grid point on the metal layer of the route guide, and is used to connect to lower-layer segments, upper-layer segments, pins or IO ports.
+
+ - Access Point Cluster (APC): A union of all Aps derived from same lower-layer segment, upper-layer guide, a pin or an IO port.
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215320836-1456596c-2207-4e07-841d-7f979bc23e24.png)
