@@ -744,3 +744,54 @@ ROUTING ::
  - Access Point Cluster (APC): A union of all Aps derived from same lower-layer segment, upper-layer guide, a pin or an IO port.
  
  ![image](https://user-images.githubusercontent.com/123591219/215320836-1456596c-2207-4e07-841d-7f979bc23e24.png)
+ 
+ 
+ Routing Topology Algorithm:
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215321122-c694328b-934d-4237-8276-0fe300a9d829.png)
+
+ 
+ Rounting Command : run_routing
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215323329-d057c328-db1f-4d54-87b0-0971842cdd3f.png)
+
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215324093-16a27c8f-0ae4-40c2-b148-d208cdcdc0d3.png)
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215324122-b7745924-dc09-4a1b-a349-56219f613918.png)
+
+ 
+ 
+ 
+ ## Questions & Answers
+ 
+ 
+ 1. PCB IS NOT A REQUIREMENT FOR ASIC DESIGN FLOW.
+ 
+ 2. STANDARD CELL LAYOUT ARE : enclosed by fixed height and unit site width rectangle.
+ 
+ 3. openlane is closed sourced flow.
+ 
+ 4. FAULT OPENEDA TOOL FACILITATES DFT IN OPENLANE FLOW.
+ 
+ 5. Detail routing is performed by TritonRoute inside OpenROAD app in openlane flow.
+ 
+ 6. WHAT IS UTILIZATION FACTOR? - Area occupied by netlist / Total area of core
+ 
+ 7. 100% UTILIZATION MEANS UTILIZATION FACTOR IS 1.
+ 
+ 8. ASPECT RATIO OF CHIP IS `height/width`.
+ 
+ 9. ASPECT RATIO OF 1 SIGNIFIES THAT A CHIP IS `square`.
+ 
+ 10. IF AREA OCCUPIED BY NETLIST IS 4MM2 AND TOTAL AREA OF CORE IS 16MM2, THEN WHAT IS THE UTILIZATION FACTOR? 0.25.
+ 
+ 11. EXAMPLES OF PRE-PLACED CELLS IN FLOORPLANNING ARE `Memories`
+ 
+ 12. WHICH OF THE FOLLOWING IS NOT DONE DURING FLOORPLAN IN OPENLANE FLOW WHICH WE SAW IN LABS? Standard Cell placement.
+ 
+ 13. WHAT DOES SETTING FP_IO_VMETAL SWITCH DO? Decides the metal layer on which only vertical IO pins are placed.
+ 
+ 14. WHAT IS THE PRECEDENCE ORDER OF FLOORPLAN CONFIGURATION SETTING FOR A DESIGN? sky130A_sky130_fd_sc_hd_config.tcl > config.tcl > floorplan.tcl.
+ 
+ 15. 
