@@ -9,7 +9,7 @@ Here, all the learnings during the workshop : [ADVANCED PHYSICAL DESIGN USING OP
 - [Day 3 - Design library cell using Magic Layout and ngspice Characterization](#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
 - [Day 4 - Pre-layout timing analysis and importance of good clock tree](#day-4---pre\-layout-timing-analysis-and-importance-of-good-clock-tree)
 - [Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA](#day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
-- [Questions & Answers](#questions-\&-answers)
+- [Questions & Answers](#questions-&-answers)
 
 # Introduction
 
