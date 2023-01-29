@@ -265,6 +265,11 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
 
 **Power Planning**
 
+Power planning means to provide power to the every macros, standard cells, and all other cells are present in the design. Power and Ground nets are usually laid out on the metal layers. In this create power and ground structure for both IO pads and core logic. The IO pads power and ground buses are built into the pad itself and will be connected by abutment.
+
+For core logic there is a core ring enclosing the core with one or more sets of power and ground rings. The next consideration is to construct cell power and ground that is internal to core logic these are called power and ground stripes that repeat at regular intervals across the logic or specified region, within the design. Each of these stripes run both vertically and horizontally at regular interval then this is called power mesh.
+
+![image](https://user-images.githubusercontent.com/123591219/215348552-60531ca4-232c-4904-97d4-0bba5686247e.png)
 
 ![image](https://user-images.githubusercontent.com/123591219/215076874-60be390d-cd0c-4b29-8889-eaa9b7258a35.png)
 
@@ -278,6 +283,40 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
 **Pin and Logical Placement**
 
 The netlist pins gets implemented on the chip.
+
+Optimization is the process of iterating through a design such that it meets timing, area and power specifications. The design must satisfy these multiple design objectives.
+
+In general, optimization can be broken down into the following areas, where timing, power and area we have already discussed and Signal Integrity we will discuss in more details during CTS and Route when route will be done:
+
+* Timing
+* Signal integrity
+* Power
+
+Area
+
+Depending on the stages of the design, optimization can include the following operations:
+
+- Adding buffers: If net length is too high, then we can add buffer to break the nets and get transition better which is eventually fixing timing.
+
+- Resizing gates: Upsize and downsize of gates helps to achieve the target of timing, power, Signal
+
+- Integrity and area. Sometimes this can be vice versa w.r.t to each other.
+
+- Restructuring the Netlist: Means Gate composition or Decomposition.
+
+- Remapping Logie: Remapping logic means changing the gates taking care of logic, that means logic is not going to be changed but gates are getting integrated or dis-integrated. EG.- Two 2 ip AND gates gives same logic what 3 ip AND gate gives.
+
+- Swapping pins: If a high activity net is paired with high power input pin, then swap the pins and make high activity net paired with the low power input pins.
+
+- Deleting buffer: When there are a greater number of unwanted buffers in the path and after removing few, slack is still meeting then we should delete those buffer.
+
+- Moving Instances: Moving instances in a way that timing gets better when we move instances nearby.
+
+- Apply useful SKEW: Applying useful skew helps slack in getting divided if the slack margin is present. Timing gets better. We will discuss this topic in detail in CTS section.
+
+- Layer optimization: Layer optimization improves the timing as layer promotion helps RC.
+
+- Track Optimization: We optimize track based on timing optimization. As we can have tracks on lower layer that can go for more delay.
 
 ![image](https://user-images.githubusercontent.com/123591219/215080124-6ea11ef4-9348-4c7c-94ee-b6a8c98e31e5.png)
 
