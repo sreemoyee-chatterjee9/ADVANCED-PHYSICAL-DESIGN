@@ -592,9 +592,9 @@ Step 1 : Create the SPICE Deck \[Connectivity information about the netlist\]
  
 ![image](https://user-images.githubusercontent.com/123591219/215188152-2281a631-b3c2-45e6-b3ff-2662281ecce0.png)
 
-Switching Thresold : 
+**Switching Thresold** : 
  
-The switching threshold, Vm, is defined as the point where Vin = Vout. Switching threshold can be set by the ratio of relative driving strengths of the PMOS and NMOS transistors. To move Vm upwards, a larger value of ratio is required, which means making the PMOS wider. Increasing the strength of the NMOS, on the other hand, moves the switching threshold closer to GND. The effect of changing the Wp/Wn ratio is to shift the transient region of the VTC. Increasing the width of the PMOS or the NMOS moves VM towards VDD or GND respectively. This property can be very useful, as asymmetrical transfer characteristics are actually desirable in some designs.
+The *switching threshold*, Vm, is defined as the point where Vin = Vout. Switching threshold can be set by the ratio of relative driving strengths of the PMOS and NMOS transistors. To move Vm upwards, a larger value of ratio is required, which means making the PMOS wider. Increasing the strength of the NMOS, on the other hand, moves the switching threshold closer to GND. The effect of changing the Wp/Wn ratio is to shift the transient region of the VTC. Increasing the width of the PMOS or the NMOS moves VM towards VDD or GND respectively. This property can be very useful, as asymmetrical transfer characteristics are actually desirable in some designs.
  
 ![image](https://user-images.githubusercontent.com/123591219/215192275-08fe9211-f8ea-4e00-8b04-45103d2a1614.png)
 ![image](https://user-images.githubusercontent.com/123591219/215192833-55e57ea2-9087-45e8-ac86-6fb6ed04edda.png)
@@ -638,142 +638,137 @@ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
  
 **SPICE PLOT ::**
  
- ![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
+![image](https://user-images.githubusercontent.com/123591219/215258937-ee745fba-0e95-416a-a103-a0ead12d4493.png)
 
  
- Rise Transition Time [From 20% to 80%] : 2.24537e-09 - 2.17978e-09 = 6.559e-11 second = 0.06559 nanosecond
+Rise Transition Time [From 20% to 80%] : 2.24537e-09 - 2.17978e-09 = 6.559e-11 second = 0.06559 nanosecond
  
- ![image](https://user-images.githubusercontent.com/123591219/215258574-8c0cd1a0-a53a-4de3-b4cc-a501d4116d79.png)
+![image](https://user-images.githubusercontent.com/123591219/215258574-8c0cd1a0-a53a-4de3-b4cc-a501d4116d79.png)
+
+Fall Transition Time [From 80% to 20%] : 4.09486e-09 - 4.05256e-09 = 0.0423e-09 second = 0.0423 nanosecond
  
- Fall Transition Time [From 80% to 20%] : 4.09486e-09 - 4.05256e-09 = 0.0423e-09 second = 0.0423 nanosecond
- 
- ![image](https://user-images.githubusercontent.com/123591219/215259509-64c62028-d7a4-45fb-be26-f03cb06931b0.png)
+![image](https://user-images.githubusercontent.com/123591219/215259509-64c62028-d7a4-45fb-be26-f03cb06931b0.png)
 
  
- Cell Rise Delay [50% of the rise]: Output - Input = 2.21073e-09 - 2.14994e-09 = 0.06079e-09 second = 0.06079 nanosecond
+Cell Rise Delay [50% of the rise]: Output - Input = 2.21073e-09 - 2.14994e-09 = 0.06079e-09 second = 0.06079 nanosecond
  
- ![image](https://user-images.githubusercontent.com/123591219/215260049-e694af89-71d2-4533-96bb-e0ae5c14b13b.png)
+![image](https://user-images.githubusercontent.com/123591219/215260049-e694af89-71d2-4533-96bb-e0ae5c14b13b.png)
 
  
- Cell Fall Delay [50% of the fall]: 4.07758e-09 - 4.04994e-09 = 0.02764e-09 second = 0.02764 nanosecond
+Cell Fall Delay [50% of the fall]: 4.07758e-09 - 4.04994e-09 = 0.02764e-09 second = 0.02764 nanosecond
  
- ![image](https://user-images.githubusercontent.com/123591219/215260226-69ac6213-4fec-48d2-89d5-c4425c95c4ac.png)
+![image](https://user-images.githubusercontent.com/123591219/215260226-69ac6213-4fec-48d2-89d5-c4425c95c4ac.png)
 
- 
- 
- 
+  
 ## Day 4 - Pre-layout timing analysis and importance of good clock tree
  
- Objective : To extract .lef file from .mag file.
+*Objective* : To extract .lef file from .mag file.
  
- tracks.info : Contains the information which is required during routing. It has the information about the metal layers. This describes where we want our routes to go.
+tracks.info : Contains the information which is required during routing. It has the information about the metal layers. This describes where we want our routes to go.
  
- ![image](https://user-images.githubusercontent.com/123591219/215268539-f3cf290f-b72b-4619-b257-59a4ceace790.png)
+![image](https://user-images.githubusercontent.com/123591219/215268539-f3cf290f-b72b-4619-b257-59a4ceace790.png)
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215268832-f8ba7b43-393d-4395-8257-b6c596ba1b6b.png)
+![image](https://user-images.githubusercontent.com/123591219/215268832-f8ba7b43-393d-4395-8257-b6c596ba1b6b.png)
 
  
- Width of the standard cell should be odd multiples of the "x" pitch.
+Width of the standard cell should be odd multiples of the "x" pitch.
  
  
- Command to extract .lef file :
+**Command to extract .lef file** :
  
- ![image](https://user-images.githubusercontent.com/123591219/215279638-f258e360-79f2-4f8a-ba88-bc520bfc4c8c.png)
+![image](https://user-images.githubusercontent.com/123591219/215279638-f258e360-79f2-4f8a-ba88-bc520bfc4c8c.png)
 
 
- ![image](https://user-images.githubusercontent.com/123591219/215279670-58ab5895-9b10-401c-bc72-16649f7ef3d7.png)
+![image](https://user-images.githubusercontent.com/123591219/215279670-58ab5895-9b10-401c-bc72-16649f7ef3d7.png)
  
  
- To Plug-in the custom .lef file into the flow following steps needs to be followed:
+To Plug-in the custom .lef file into the flow following steps needs to be followed:
  
- set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
  
- add_lefs -src $lefs
+add_lefs -src $lefs
  
- run_synthesis
- 
- 
- Custom .lef file with custom config.tcl file : 
- 
- ![image](https://user-images.githubusercontent.com/123591219/215283701-9e28b9fc-3d09-4c8a-be42-41aa310a1991.png)
+run_synthesis
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215283812-6d85090e-f952-4d3b-b60a-f8e950daa5d2.png)
+Custom .lef file with custom config.tcl file : 
+ 
+![image](https://user-images.githubusercontent.com/123591219/215283701-9e28b9fc-3d09-4c8a-be42-41aa310a1991.png)
+ 
+ 
+![image](https://user-images.githubusercontent.com/123591219/215283812-6d85090e-f952-4d3b-b60a-f8e950daa5d2.png)
 
   
  
- Introduction to delay tables
+Introduction to delay tables
  
  
- Power Aware CTS:
- 
- 
- ![image](https://user-images.githubusercontent.com/123591219/215285566-4e7c59ec-ee10-461d-9799-0b3fa8679bf9.png)
- 
- 
- Lab steps to configure synthesis settings to fix slack and include vsdinv
- 
- Before :: Chip area for module '\picorv32a': 147712.918400
- 
- tns -711.59
- 
- wns -23.89
- 
- % echo $::env(SYNTH_BUFFERING)
- 
- 1
- 
- % echo $::env(SYNTH_SIZING)
- 
- 0
-
- % echo $::env(SYNTH_DRIVING_CELL)
- 
- sky130_fd_sc_hd__inv_8
-
- 
- Modifying SYNTH_STRATEGY to 2 from 1
- 
- set ::env(SYNTH_STRATEGY) 1
- 
- set ::env(SYNTH_SIZING) 1
- 
- 
- We have plugged in out custom cell in the openlane flow:
+Power Aware CTS:
   
- ![image](https://user-images.githubusercontent.com/123591219/215288866-9fba097d-c93d-46f4-a932-f00a2aaa6f3e.png)
+![image](https://user-images.githubusercontent.com/123591219/215285566-4e7c59ec-ee10-461d-9799-0b3fa8679bf9.png)
  
- ![image](https://user-images.githubusercontent.com/123591219/215288989-751c00b7-048b-471d-a803-789ea8b0d58d.png)
  
- ![image](https://user-images.githubusercontent.com/123591219/215289090-270ab1f1-3dfc-4c80-998a-5267a8f770d6.png)
+*Lab steps to configure synthesis settings to fix slack and include vsdinv*
+ 
+Before :: Chip area for module '\picorv32a': 147712.918400
+ 
+tns -711.59
+ 
+wns -23.89
+ 
+% echo $::env(SYNTH_BUFFERING)
+ 
+1
+ 
+% echo $::env(SYNTH_SIZING)
+ 
+0
+
+% echo $::env(SYNTH_DRIVING_CELL)
+ 
+sky130_fd_sc_hd__inv_8
 
 
- Version Issue ::
+Modifying SYNTH_STRATEGY to 2 from 1
  
- ![image](https://user-images.githubusercontent.com/123591219/215289561-f26fdf5b-3f52-48d6-bb23-c2e165f3c8a9.png)
+set ::env(SYNTH_STRATEGY) 1
+ 
+set ::env(SYNTH_SIZING) 1
+ 
+ 
+We have plugged in out custom cell in the openlane flow:
+  
+![image](https://user-images.githubusercontent.com/123591219/215288866-9fba097d-c93d-46f4-a932-f00a2aaa6f3e.png)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215288989-751c00b7-048b-471d-a803-789ea8b0d58d.png)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215289090-270ab1f1-3dfc-4c80-998a-5267a8f770d6.png)
+
+
+Version Issue ::
+ 
+![image](https://user-images.githubusercontent.com/123591219/215289561-f26fdf5b-3f52-48d6-bb23-c2e165f3c8a9.png)
 
  
- Timing analysis with ideal clocks using openSTA
+Timing analysis with ideal clocks using openSTA
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215289376-24040c2e-3980-43ad-9437-808df83373e7.png)
+![image](https://user-images.githubusercontent.com/123591219/215289376-24040c2e-3980-43ad-9437-808df83373e7.png)
 
  
- Lab steps to configure OpenSTA for post-synth timing analysis
+Lab steps to configure OpenSTA for post-synth timing analysis
  
- ![image](https://user-images.githubusercontent.com/123591219/215291843-ce888e31-5d44-4971-9a01-6573d4b106f6.png)
+![image](https://user-images.githubusercontent.com/123591219/215291843-ce888e31-5d44-4971-9a01-6573d4b106f6.png)
 
- ![image](https://user-images.githubusercontent.com/123591219/215291865-d9be6dd9-fcc6-46a5-b307-72391c12b06d.png)
+![image](https://user-images.githubusercontent.com/123591219/215291865-d9be6dd9-fcc6-46a5-b307-72391c12b06d.png)
 
- OUTPUT : command:: ![image](https://user-images.githubusercontent.com/123591219/215291925-2d455199-ce14-474f-98fc-16bdf23f28ae.png)
+OUTPUT : command:: ![image](https://user-images.githubusercontent.com/123591219/215291925-2d455199-ce14-474f-98fc-16bdf23f28ae.png)
 
- ![image](https://user-images.githubusercontent.com/123591219/215291949-169dd418-6f5c-449d-a6fa-5b81cfdbae81.png)
+![image](https://user-images.githubusercontent.com/123591219/215291949-169dd418-6f5c-449d-a6fa-5b81cfdbae81.png)
  
- 
- 
- 
-Lab steps to execute OpenSTA with right timing libraries and CTS
+
+**Lab steps to execute OpenSTA with right timing libraries and CTS**
 
 openroad
 
@@ -805,8 +800,6 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 
 ![image](https://user-images.githubusercontent.com/123591219/215314671-bf775630-334f-49e6-82c3-8d56324e092d.png)
 
-
- 
  
 ## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
  
@@ -819,7 +812,7 @@ ROUTING ::
 ![image](https://user-images.githubusercontent.com/123591219/215319486-22cfbe00-2e4c-4996-9388-983ec5da337d.png)
  
 
- TritonRoute
+**TritonRoute**
 
 - Performs initial detail route.
 
@@ -841,7 +834,7 @@ ROUTING ::
  2. Should be in the preferred direction.
  
  
- Inter-guide connectivity
+ **Inter-guide connectivity**
 
 - Two guides are connected if:
 - They are on the same metal layer with touching edges, or
@@ -850,86 +843,86 @@ ROUTING ::
 - Each unconnected terminal (i.e., pin of a standard-cell instance should have its pin shape overlapped by a route guide.
 
  
- Intra-Layer Parallel and Inter-Layer Sequential Panel Routing :
+Intra-Layer Parallel and Inter-Layer Sequential Panel Routing :
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215320365-27b85d45-2d14-4e40-ae2f-96a061501612.png)
+![image](https://user-images.githubusercontent.com/123591219/215320365-27b85d45-2d14-4e40-ae2f-96a061501612.png)
  
  
 
- Handling Connectivity:
+Handling Connectivity:
 
- - Access Point (AP): An on-grid point on the metal layer of the route guide, and is used to connect to lower-layer segments, upper-layer segments, pins or IO ports.
+- Access Point (AP): An on-grid point on the metal layer of the route guide, and is used to connect to lower-layer segments, upper-layer segments, pins or IO ports.
 
- - Access Point Cluster (APC): A union of all Aps derived from same lower-layer segment, upper-layer guide, a pin or an IO port.
+- Access Point Cluster (APC): A union of all Aps derived from same lower-layer segment, upper-layer guide, a pin or an IO port.
  
- ![image](https://user-images.githubusercontent.com/123591219/215320836-1456596c-2207-4e07-841d-7f979bc23e24.png)
+![image](https://user-images.githubusercontent.com/123591219/215320836-1456596c-2207-4e07-841d-7f979bc23e24.png)
  
  
- Routing Topology Algorithm:
+Routing Topology Algorithm:
  
- ![image](https://user-images.githubusercontent.com/123591219/215321122-c694328b-934d-4237-8276-0fe300a9d829.png)
-
- 
- Rounting Command : run_routing
- 
- ![image](https://user-images.githubusercontent.com/123591219/215323329-d057c328-db1f-4d54-87b0-0971842cdd3f.png)
+![image](https://user-images.githubusercontent.com/123591219/215321122-c694328b-934d-4237-8276-0fe300a9d829.png)
 
  
- ![image](https://user-images.githubusercontent.com/123591219/215324093-16a27c8f-0ae4-40c2-b148-d208cdcdc0d3.png)
+Rounting Command : run_routing
  
- ![image](https://user-images.githubusercontent.com/123591219/215324122-b7745924-dc09-4a1b-a349-56219f613918.png)
+![image](https://user-images.githubusercontent.com/123591219/215323329-d057c328-db1f-4d54-87b0-0971842cdd3f.png)
+
+ 
+![image](https://user-images.githubusercontent.com/123591219/215324093-16a27c8f-0ae4-40c2-b148-d208cdcdc0d3.png)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215324122-b7745924-dc09-4a1b-a349-56219f613918.png)
 
  
  
  
- ## Questions & Answers
+## Questions & Answers
  
  
- 1. PCB IS NOT A REQUIREMENT FOR ASIC DESIGN FLOW.
+1. PCB IS NOT A REQUIREMENT FOR ASIC DESIGN FLOW.
  
- 2. STANDARD CELL LAYOUT ARE : enclosed by fixed height and unit site width rectangle.
+2. STANDARD CELL LAYOUT ARE : enclosed by fixed height and unit site width rectangle.
  
- 3. openlane is closed sourced flow.
+3. openlane is closed sourced flow.
  
- 4. FAULT OPENEDA TOOL FACILITATES DFT IN OPENLANE FLOW.
+4. FAULT OPENEDA TOOL FACILITATES DFT IN OPENLANE FLOW.
  
- 5. Detail routing is performed by TritonRoute inside OpenROAD app in openlane flow.
+5. Detail routing is performed by TritonRoute inside OpenROAD app in openlane flow.
  
- 6. WHAT IS UTILIZATION FACTOR? - Area occupied by netlist / Total area of core
+6. WHAT IS UTILIZATION FACTOR? - Area occupied by netlist / Total area of core
  
- 7. 100% UTILIZATION MEANS UTILIZATION FACTOR IS 1.
+7. 100% UTILIZATION MEANS UTILIZATION FACTOR IS 1.
  
- 8. ASPECT RATIO OF CHIP IS `height/width`.
+8. ASPECT RATIO OF CHIP IS `height/width`.
  
- 9. ASPECT RATIO OF 1 SIGNIFIES THAT A CHIP IS `square`.
+9. ASPECT RATIO OF 1 SIGNIFIES THAT A CHIP IS `square`.
  
- 10. IF AREA OCCUPIED BY NETLIST IS 4MM2 AND TOTAL AREA OF CORE IS 16MM2, THEN WHAT IS THE UTILIZATION FACTOR? 0.25.
+10. IF AREA OCCUPIED BY NETLIST IS 4MM2 AND TOTAL AREA OF CORE IS 16MM2, THEN WHAT IS THE UTILIZATION FACTOR? 0.25.
  
- 11. EXAMPLES OF PRE-PLACED CELLS IN FLOORPLANNING ARE `Memories`
+11. EXAMPLES OF PRE-PLACED CELLS IN FLOORPLANNING ARE `Memories`
  
- 12. WHICH OF THE FOLLOWING IS NOT DONE DURING FLOORPLAN IN OPENLANE FLOW WHICH WE SAW IN LABS? Standard Cell placement.
+12. WHICH OF THE FOLLOWING IS NOT DONE DURING FLOORPLAN IN OPENLANE FLOW WHICH WE SAW IN LABS? Standard Cell placement.
  
- 13. WHAT DOES SETTING FP_IO_VMETAL SWITCH DO? Decides the metal layer on which only vertical IO pins are placed.
+13. WHAT DOES SETTING FP_IO_VMETAL SWITCH DO? Decides the metal layer on which only vertical IO pins are placed.
  
- 14. WHAT IS THE PRECEDENCE ORDER OF FLOORPLAN CONFIGURATION SETTING FOR A DESIGN?
+14. WHAT IS THE PRECEDENCE ORDER OF FLOORPLAN CONFIGURATION SETTING FOR A DESIGN?
  
-     sky130A_sky130_fd_sc_hd_config.tcl > config.tcl > floorplan.tcl.
+    sky130A_sky130_fd_sc_hd_config.tcl > config.tcl > floorplan.tcl.
  
- 15. A TYPICAL STANDARD CELL INSIDE A LIBRARY CAN HAVE : different functionality, different sizes, Different Vt.
+15. A TYPICAL STANDARD CELL INSIDE A LIBRARY CAN HAVE : different functionality, different sizes, Different Vt.
  
- 16. Vt Means Thresold Voltage.
+16. Vt Means Thresold Voltage.
  
- 17. PDK = Process Design Kit
+17. PDK = Process Design Kit
  
- 18. WHAT DOES A PDK TYPICALLY CONSISTS OF? - DRC & LVS rules, SPICE models, library and user defined specs.
+18. WHAT DOES A PDK TYPICALLY CONSISTS OF? - DRC & LVS rules, SPICE models, library and user defined specs.
  
- 19. ONE OF MANY PARAMETERS DEFINED IN LIBRARY AND USER DEFINED SPECS IS ? cell height.
+19. ONE OF MANY PARAMETERS DEFINED IN LIBRARY AND USER DEFINED SPECS IS ? cell height.
  
- 20. A TYPICAL CIRCUIT DESIGN REQUIREMENT IS `IDSN+IDSP = 0`
+20. A TYPICAL CIRCUIT DESIGN REQUIREMENT IS `IDSN+IDSP = 0`
  
- 21. TYPICAL OUTPUTS OF A LIBRARY CHARACTERIZATION CELL DESIGN FLOW ARE `CDL, GDS2, LEF, CIR`
+21. TYPICAL OUTPUTS OF A LIBRARY CHARACTERIZATION CELL DESIGN FLOW ARE `CDL, GDS2, LEF, CIR`
  
- 22. TIMING LIBRARIES CHARACTERIZATION TYPE CAN BE CLASSIFIED AS timing, noise, power.
+22. TIMING LIBRARIES CHARACTERIZATION TYPE CAN BE CLASSIFIED AS timing, noise, power.
  
- 23. 
+23. 
