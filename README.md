@@ -28,7 +28,7 @@ All the steps are further discussed in details in the repository.
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 
-FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC) that is built with a large number of logical processing resources, or logic blocks. These logic blocks consist of digital logic components such as multiplexers, flip-flops, lookup tables, and adders. We can divide the FPGA in three main parts: *
+FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC) that is built with a large number of logical processing resources, or logic blocks. These logic blocks consist of digital logic components such as multiplexers, flip-flops, lookup tables, and adders. We can divide the FPGA in three main parts:
 * <pre>Configurable Logic Blocks  — To implement logic functions.</pre>
 * <pre>Programmable Interconnects — To implement routing.</pre>
 * <pre>Programmable I/O Blocks    — To connect with external components.</pre>
@@ -42,15 +42,17 @@ Packages are empty vessels into which the bare chip is placed. Tiny wires connec
 ![image](https://user-images.githubusercontent.com/123591219/214792447-edf8fe49-895e-45d7-8d79-127c49dc1b0f.png)
 
 The Chip sitting inside the package consists of various components.
-* PADS : Through pads, the signals can be sent inside/outside of the chip. They are intermediate structures connecting internal signals from the core of the integrated circuit to the external pins of the chip package.
-* DIE  : Die is the complete chip which gets manufactured on the silicon wafer. It is the square of silicon containing an integrated circuit that has been cut out of the wafer, on which the given functional circuit is fabricated.
-* Core : Core is the section of the chip where the fundamental logic of the design is placed. A Core typically consists of following components - SoC, SRAM, ADC/DAC, PLL, SPI.
+* **PADS** : Through pads, the signals can be sent inside/outside of the chip. They are intermediate structures connecting internal signals from the core of the integrated circuit to the external pins of the chip package.
+* **DIE**  : Die is the complete chip which gets manufactured on the silicon wafer. It is the square of silicon containing an integrated circuit that has been cut out of the wafer, on which the given functional circuit is fabricated.
+* **Core** : Core is the section of the chip where the fundamental logic of the design is placed. A Core typically consists of following components - SoC, SRAM, ADC/DAC, PLL, SPI.
 
-Foundry IPs : 
-IP = Intellectual Property
+**Foundry IPs : **
+
+*IP = Intellectual Property*
 All the devices are dependent on Foundry. It is a place where the Chip actually get manufactured. Generally, fabrication industries(foundry) provide IPs such as standard cells, IO blocks, etc.. PLL, SRAM, ACD/DAC are some examples of foundry IPs. We communicate with IP with the interface files provided.
 
-MACROS :
+**MACROS :**
+
 RISCV SOC, SPI these are the digital blocks which are called Macros.
 ![image](https://user-images.githubusercontent.com/123591219/214797116-7103d9d9-03f7-492a-b751-bbb51c848ada.png)
 
