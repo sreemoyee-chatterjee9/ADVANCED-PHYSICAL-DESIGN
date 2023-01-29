@@ -701,10 +701,10 @@ Custom .lef file with custom config.tcl file :
 
   
  
-Introduction to delay tables
+**Introduction to delay tables**
  
  
-Power Aware CTS:
+**Power Aware CTS** :
   
 ![image](https://user-images.githubusercontent.com/123591219/215285566-4e7c59ec-ee10-461d-9799-0b3fa8679bf9.png)
  
@@ -732,9 +732,9 @@ sky130_fd_sc_hd__inv_8
 
 Modifying SYNTH_STRATEGY to 2 from 1
  
-set ::env(SYNTH_STRATEGY) 1
+<pre>set ::env(SYNTH_STRATEGY) 1
  
-set ::env(SYNTH_SIZING) 1
+set ::env(SYNTH_SIZING) 1</pre>
  
  
 We have plugged in out custom cell in the openlane flow:
@@ -751,26 +751,28 @@ Version Issue ::
 ![image](https://user-images.githubusercontent.com/123591219/215289561-f26fdf5b-3f52-48d6-bb23-c2e165f3c8a9.png)
 
  
-Timing analysis with ideal clocks using openSTA
+**Timing analysis with ideal clocks using openSTA**
  
  
 ![image](https://user-images.githubusercontent.com/123591219/215289376-24040c2e-3980-43ad-9437-808df83373e7.png)
 
  
-Lab steps to configure OpenSTA for post-synth timing analysis
+**Lab steps to configure OpenSTA for post-synth timing analysis**
  
 ![image](https://user-images.githubusercontent.com/123591219/215291843-ce888e31-5d44-4971-9a01-6573d4b106f6.png)
 
 ![image](https://user-images.githubusercontent.com/123591219/215291865-d9be6dd9-fcc6-46a5-b307-72391c12b06d.png)
 
-OUTPUT : command:: ![image](https://user-images.githubusercontent.com/123591219/215291925-2d455199-ce14-474f-98fc-16bdf23f28ae.png)
+**OUTPUT** : command:: 
+
+![image](https://user-images.githubusercontent.com/123591219/215291925-2d455199-ce14-474f-98fc-16bdf23f28ae.png)
 
 ![image](https://user-images.githubusercontent.com/123591219/215291949-169dd418-6f5c-449d-a6fa-5b81cfdbae81.png)
  
 
 **Lab steps to execute OpenSTA with right timing libraries and CTS**
 
-openroad
+<pre>openroad
 
 read_lef /openLANE_flow/designs/picorv32a/runs/28-01_15-09/tmp/merged.lef
 
@@ -796,7 +798,7 @@ set_propagated_clock [all_clocks]
 
 report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
-report_checks -path_delay min_max -field {slew trans net cap input_pin} -format full_clock_expanded -digits 4
+report_checks -path_delay min_max -field {slew trans net cap input_pin} -format full_clock_expanded -digits 4</pre>
 
 ![image](https://user-images.githubusercontent.com/123591219/215314671-bf775630-334f-49e6-82c3-8d56324e092d.png)
 
@@ -807,7 +809,7 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 ![image](https://user-images.githubusercontent.com/123591219/215317101-5a9aa1a9-2430-48bc-b856-3b5541960d8a.png)
 
 
-ROUTING ::
+**ROUTING** :
  
 ![image](https://user-images.githubusercontent.com/123591219/215319486-22cfbe00-2e4c-4996-9388-983ec5da337d.png)
  
