@@ -9,6 +9,7 @@ Here, all the learnings during the workshop : [ADVANCED PHYSICAL DESIGN USING OP
 - [Day 3 - Design library cell using Magic Layout and ngspice Characterization](#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
 - [Day 4 - Pre-layout timing analysis and importance of good clock tree](#day-4---pre\-layout-timing-analysis-and-importance-of-good-clock-tree)
 - [Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA](#day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
+- [Questions & Answers](#questions-\&-answers)
 
 # Introduction
 
@@ -949,4 +950,16 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 
 33. WHAT DOES BELOW STATEMENT IN TECH FILE MEAN: \NSPACING NPRES *NSD 480 TOUCHING_ILLEGAL \\N :: npolyres to nsubstratendiff spacing less than 0.48um is a violation
 
-34. 
+34. WHAT IS THE DEFAULT PITCH AND OFFSET (RESPECTIVELY) OF METAL2 LAYER DEFINED IN TECH LEF? (CLUE: LOOK INTO MERGED.LEF FILE) - 0.46, 0.23
+
+35. FOR AND GATE, OUTPUT FOLLOWS ONE OF THE INPUTS OF AND GATE, WHEN OTHER INPUT IS `Logic 1`.
+
+36. FOR OR GATE, OUTPUT FOLLOWS ONE OF THE INPUTS OF OR GATE, WHEN OTHER INPUT IS `Logic 0`.
+
+37. TYPICAL REQUIREMENTS OF GOOD CLOCK TREE - 1. At every level, each node should drive same load; 2. Identical buffer at same level.
+
+38. DELAY TABLE PROVIDES CELL DELAYS FOR A COMBINATION OF : output load and input slew.
+
+39. FOR THE CBUF 1 DELAY TABLE SHOWN IN VIDEO, IF CBUF 1 HAS AN INPUT SLEW OF 10PS AND OUTPUT LOAD OF 110FF, WHAT IS THE DELAY OF CBUF 1? NOTE - YOU CAN SELECT THE CLOSEST ONE FROM BELOW - x6.
+
+40.
