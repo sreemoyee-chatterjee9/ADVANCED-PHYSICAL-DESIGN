@@ -1036,4 +1036,35 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 
 66. WHAT DOES THE SWITCH GLOBAL_RT_ADJUSTMENT SET FOR VALUES : 1=most reduction,0=least reduction.
 
-67. 
+67. WHAT IS TRUE ABOUT ENV(ROUTING_STRATEGY)=0 AND ENV(ROUTING_STRATEGY)=14 ?
+
+    - ROUTING_STRATEGY 14 has better routing QoR than ROUTING_STRATEGY 0
+    
+    - ROUTING_STRATEGY 0 has lesser run-time and memory overhead than ROUTING_STRATEGY 14
+    
+    - ROUTING_STRATEGY 14 converges for a 0 DRC routing
+    
+68. GLOBAL ROUTING PHASE OF ROUTING IS PERFORMED IN OPENLANE FLOW BY? - FastRoute
+
+69. WHICH OF THE BELOW IS NOT A STAGE OF PREPROCESSING OF A GUIDE? - Flushing
+    
+    - Included are : Bridging, Merging, Splitting.
+    
+70. WHICH ADDITIONAL COMMAND FROM POST CTS NEEDS TO BE CONSIDERED WHILE DOING STA POST ROUTING? - read_sdc
+
+71. PROPAGATION DELAY OF INVERTER IS `Time(out_fall_thr) - Time(in_rise_thr)`
+
+72. TYPICAL VALUE OF SLEW`_`LOW`_`RISE`_`THRESHOLD IS `20%`
+
+73. TYPICAL VALUE SLEW`_`HIGH`_`FALL`_`THR IS `80%`
+
+74. TYPICAL VALUE OF IN`_`FALL`_`THR IS `50%`
+
+75. TYPICALLY FOR CMOS INVERTER, GATE INPUT VOLTAGE LIES BETWEEN `gate and ground node`
+
+76. FOR CMOS INVERTER, NMOS TRANSISTOR IS PRESENT BETWEEN WHICH NODES? Gate, drain and ground node.
+
+77. WHAT DID ```GIT CLONE HTTPS://GITHUB.COM/NICKSON-JOSE/VSDSTDCELLDESIGN.GIT``` DO?  - Cloned vsdstdcelldesign repo from GitHub to local machine
+
+78. WHAT'S THE LOCATION OF MAGIC TECH FILE IN OPENLANE? - ~/openlane_working_dir/pdks/sky130A/libs\.tech/magic/sky130A\.tech
+
