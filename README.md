@@ -324,6 +324,26 @@ Depending on the stages of the design, optimization can include the following op
 
 
 
+**FloorPlan**
+
+Floorplanning is the art of any physical design. A well and perfect floorplan leads to an ASIC design with higher performance and optimum area. Floorplanning can be challenging in that, it deals with the placement of I/O pads and macros as well as power and ground structure. Before we are going for the floor planning to make sure that inputs are used for floorplan is prepared properly.
+
+Inputs for floorplan:
+
+- Netlist (.v)
+
+- Technology file (techlef)
+
+- Timing Library files (.lib)
+
+- Physical library (.lef)
+
+- Synopsys design constraints (.sdc)
+
+
+![image](https://user-images.githubusercontent.com/123591219/215349274-5e8cbd7d-479f-4745-9ed9-d5a69535c881.png)
+
+
 **Steps to run floorplan using OpenLANE**
 
 Floor Planning can be done using following command.
