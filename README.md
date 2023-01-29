@@ -686,8 +686,45 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 ![image](https://user-images.githubusercontent.com/123591219/215314671-bf775630-334f-49e6-82c3-8d56324e092d.png)
 
 
-
+ 
+ 
+## Day 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+ 
+ 
 ![image](https://user-images.githubusercontent.com/123591219/215317101-5a9aa1a9-2430-48bc-b856-3b5541960d8a.png)
 
 
+ROUTING ::
+ 
+![image](https://user-images.githubusercontent.com/123591219/215319486-22cfbe00-2e4c-4996-9388-983ec5da337d.png)
+ 
 
+ TritonRoute
+
+- Performs initial detail route.
+
+- Honors the preprocessed route guides (obtained after fast route) ,i.e. , attempts as much as possible to route within route guides.
+
+- Assumes route guides for each net satisfy inter-guide connectivity.
+
+- Works on proposed MILP-based panel routing scheme with intra-layer parallel and inter-layer sequential routing framework.
+
+
+![image](https://user-images.githubusercontent.com/123591219/215320052-8238230a-ffc8-420f-a590-8f045034dfcd.png)
+
+ Preprocessed Route Guide:
+ 
+ Requirements:
+ 
+ 1. Should have Unit Width.
+ 
+ 2. Should be in the preferred direction.
+ 
+ 
+ Inter-guide connectivity
+
+- Two guides are connected if:
+- They are on the same metal layer with touching edges, or
+- They are on neighboring metal layers with a nonzero vertically overlapped area.
+
+- Each unconnected terminal (i.e., pin of a standard-cell instance should have its pin shape overlapped by a route guide.
