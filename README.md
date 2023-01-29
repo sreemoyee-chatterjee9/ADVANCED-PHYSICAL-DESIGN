@@ -845,14 +845,14 @@ report_checks -path_delay min_max -field {slew trans net cap input_pin} -format 
 - Each unconnected terminal (i.e., pin of a standard-cell instance should have its pin shape overlapped by a route guide.
 
  
-Intra-Layer Parallel and Inter-Layer Sequential Panel Routing :
+**Intra-Layer Parallel and Inter-Layer Sequential Panel Routing** :
  
  
 ![image](https://user-images.githubusercontent.com/123591219/215320365-27b85d45-2d14-4e40-ae2f-96a061501612.png)
  
  
 
-Handling Connectivity:
+**Handling Connectivity**:
 
 - Access Point (AP): An on-grid point on the metal layer of the route guide, and is used to connect to lower-layer segments, upper-layer segments, pins or IO ports.
 
@@ -861,12 +861,12 @@ Handling Connectivity:
 ![image](https://user-images.githubusercontent.com/123591219/215320836-1456596c-2207-4e07-841d-7f979bc23e24.png)
  
  
-Routing Topology Algorithm:
+**Routing Topology Algorithm** :
  
 ![image](https://user-images.githubusercontent.com/123591219/215321122-c694328b-934d-4237-8276-0fe300a9d829.png)
 
  
-Rounting Command : run_routing
+<pre>Rounting Command : run_routing</pre>
  
 ![image](https://user-images.githubusercontent.com/123591219/215323329-d057c328-db1f-4d54-87b0-0971842cdd3f.png)
 
