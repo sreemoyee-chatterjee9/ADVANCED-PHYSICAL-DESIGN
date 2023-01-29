@@ -171,7 +171,7 @@ All the designsd are extracted from the folder mentioned below:
  
 For the existing design run, we can overwrite the design with the following command:
  
-<pre>prep -design picorv32a -tag <TAG_WITH_DATE> -overwrite</pre>
+<pre>prep -design picorv32a -tag \<TAG_WITH_DATE\> -overwrite</pre>
 
 ![image](https://user-images.githubusercontent.com/123591219/214923431-e07ed188-32f7-4bf4-b2ee-991d9152516e.png)
  
@@ -237,16 +237,16 @@ Aspect Ratio = Height/Width</pre>
 
 Following are the components, that can be implemented once and instantiated multiple times as per requirements:
  
-Memory, Clock-Gating Cells, Comparator, MUX
+Memory, Clock-Gating Cells, Comparator, MUX.
 
 - The arrangements of these IP's in a chip is referred to as Floor-Planning.
 
 - These IP's have user-defined locations, and they are placed on the chip before automated placement and routing, hence, called pre-placed cells.
  
  
- De-coupling Capacitors 
+**De-coupling Capacitors**
  
- Pre-Placed cells are surrounded by the de-coupling capacitors. A decoupling capacitor, also referred to as a bypass capacitor, acts as a kind of energy reservoir. When a decoupling capacitor is in place, it will do one of two things:
+Pre-Placed cells are surrounded by the de-coupling capacitors. A decoupling capacitor, also referred to as a bypass capacitor, acts as a kind of energy reservoir. When a decoupling capacitor is in place, it will do one of two things:
  
  1. If the input voltage drops, then a decoupling capacitor will be able to provide enough power to an IC to keep the voltage stable.
  
@@ -263,7 +263,8 @@ Decoupling capacitors connect between the power source (5V, 3.3V, etc.) and grou
 ![image](https://user-images.githubusercontent.com/123591219/215057048-3e2ce250-b4d0-426f-9bc0-bcdb0a6f2cd0.png)
 
 
-Power Planning 
+**Power Planning**
+
 
 ![image](https://user-images.githubusercontent.com/123591219/215076874-60be390d-cd0c-4b29-8889-eaa9b7258a35.png)
 
@@ -274,7 +275,7 @@ Power Planning
 ![image](https://user-images.githubusercontent.com/123591219/215077845-9f45cf2c-7825-4d76-b540-da7ea19559cb.png)
 
 
-Pin and Logical Placement
+**Pin and Logical Placement**
 
 The netlist pins gets implemented on the chip.
 
@@ -284,96 +285,102 @@ The netlist pins gets implemented on the chip.
 
 
 
-Steps to run floorplan using OpenLANE
+**Steps to run floorplan using OpenLANE**
 
- Floor Planning can be done using following command.
- <pre>run_floorplan</pre>
+Floor Planning can be done using following command.
+<pre>run_floorplan</pre>
  
- The final configuration file that is taken for consideration is :
+The final configuration file that is taken for consideration is :
  
- /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl
+<pre>/home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/sky130A_sky130_fd_sc_hd_config.tcl</pre>
  
- As an output, .def file gets generated:
+As an output, .def file gets generated:
  
- /home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-01_18-58/results/floorplan/picorv32a.floorplan.def
+<pre>/home/sreemoyee07/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-01_18-58/results/floorplan/picorv32a.floorplan.def</pre>
  
- ![image](https://user-images.githubusercontent.com/123591219/215092262-418f67de-30d2-4739-878f-2b510bb737ca.png)
+![image](https://user-images.githubusercontent.com/123591219/215092262-418f67de-30d2-4739-878f-2b510bb737ca.png)
 
- 1 Micron = 1000 Data Bits Units
- Area of the chip = ( 660685000 micro-meter X 671405000 micro-meter ) 
- 
- To visualize the layout after floor plan, following command can be used to load the layout with magic tool with the input parameters : lef and def files
- 
- ![image](https://user-images.githubusercontent.com/123591219/215095430-6e2dc491-52f0-4939-bc7e-e76fee4d2609.png)
+*1 Micron = 1000 Data Bits Units*
 
- picorv32a Topmount Cell in the Window
+Area of the chip = ( 660685000 micro-meter X 671405000 micro-meter ) 
  
- ![image](https://user-images.githubusercontent.com/123591219/215096989-804dd748-1948-41d9-8b73-19b64063f285.png)
+To visualize the layout after floor plan, following command can be used to load the layout with magic tool with the input parameters : lef and def files
  
- Equidisantant Input Ports :
- 
- ![image](https://user-images.githubusercontent.com/123591219/215097923-1138f88b-04b7-48a9-bd1d-7bd8799751b0.png)
+![image](https://user-images.githubusercontent.com/123591219/215095430-6e2dc491-52f0-4939-bc7e-e76fee4d2609.png)
 
- To know which layer we are in: (Metal Layer 3, which we set in horizontal metal in configuration file)
+picorv32a Topmount Cell in the Window
  
- ![image](https://user-images.githubusercontent.com/123591219/215098502-fed25763-2b97-4434-a5a2-ed099e76f8bf.png)
+![image](https://user-images.githubusercontent.com/123591219/215096989-804dd748-1948-41d9-8b73-19b64063f285.png)
  
- The Vertical Metal Layer is as follows: (Metal Layer 2)
+**Equidisantant Input Ports** :
  
- ![image](https://user-images.githubusercontent.com/123591219/215104238-e07cf04a-499b-4261-8ea8-86210be25278.png)
+![image](https://user-images.githubusercontent.com/123591219/215097923-1138f88b-04b7-48a9-bd1d-7bd8799751b0.png)
 
- ![image](https://user-images.githubusercontent.com/123591219/215107556-4d33f1f0-d2a1-4843-b0db-9e178e299d06.png)
-
+To know which layer we are in: (Metal Layer 3, which we set in horizontal metal in configuration file)
  
- Floorplan does not take into consideration the placement of standerd cell. But standerd cells are already present in the floor plan as shown below:
- ![image](https://user-images.githubusercontent.com/123591219/215108286-f08153da-8707-4687-aaba-06279fdeae96.png)
+![image](https://user-images.githubusercontent.com/123591219/215098502-fed25763-2b97-4434-a5a2-ed099e76f8bf.png)
+ 
+The Vertical Metal Layer is as follows: (Metal Layer 2)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215104238-e07cf04a-499b-4261-8ea8-86210be25278.png)
+
+![image](https://user-images.githubusercontent.com/123591219/215107556-4d33f1f0-d2a1-4843-b0db-9e178e299d06.png)
 
  
+Floorplan does not take into consideration the placement of standerd cell. But standerd cells are already present in the floor plan as shown below:
+
+![image](https://user-images.githubusercontent.com/123591219/215108286-f08153da-8707-4687-aaba-06279fdeae96.png)
+
  
-Netlist binding and initial place design
+ 
+**Netlist binding and initial place design**
  
 - Library contains the dimensions and the timing (delay) informations of each of the cells and the required operation condition of each of the cells. It stores all the flavors of each and every cell. 
  
- ![image](https://user-images.githubusercontent.com/123591219/215111810-97cfd30e-2e1f-41df-92c8-21448c6564f4.png)
+![image](https://user-images.githubusercontent.com/123591219/215111810-97cfd30e-2e1f-41df-92c8-21448c6564f4.png)
 
  
- After forming the proper dimentions to the cells, the next step is to place the cells on the floor plan.
+After forming the proper dimentions to the cells, the next step is to place the cells on the floor plan.
  
- ![image](https://user-images.githubusercontent.com/123591219/215112305-8f78de8a-f65e-4821-b5ed-bc4fcd478fb1.png)
+![image](https://user-images.githubusercontent.com/123591219/215112305-8f78de8a-f65e-4821-b5ed-bc4fcd478fb1.png)
 
- Repeater : A repeater is a buffer which has an input receiver and a driver or transmitter to resend a cleaned up version of the signal which was received. Repeaters are widely used to combat the quadratic delay of long on-chip wires. A conventional repeater is a CMOS inverter placed periodically along the long wire. This design has two drawbacks. The wire must have an even number of repeaters to preserve signal polarity. This forces the designer to sometimes use a suboptimal number of repeaters. It is also awkward when a wire branches because repeaters must be placed in such a way that all branches have an even number of repeaters. The second drawback is that many repeaters are required. For floorplanning reasons, repeaters tend to be grouped into “gas stations” which may not be immediately under the best wire route. Thus, longer wires are required to reach the gas stations. To deal with these problems, some designers have constructed repeaters from pairs of inverters. This automatically solves the polarity problem. Moreover, it may lead to fewer repeaters along the wire, since each repeater has lower input capacitance and higher output drive. This reduces the number of gas stations and extra routing required. Unfortunately, buffers are inherently slower than repeaters. This document explores the use of buffers as repeaters. It comes to a remarkably elegant conclusion showing that “optimal” buffer repeaters” are only slightly slower than “optimal” inverter repeaters.
- 
- Data Slew Analysis: Slew is dependent on the value of the capacitor. The higher the value of the capacitor, the amount of charge, required to charge the capacitor will be high and the slew will be even bad.
+**Repeater** :
 
- Optimized Placement :
- ![image](https://user-images.githubusercontent.com/123591219/215120522-b076b064-20b4-4200-97c7-575d39ad8695.png)
+A repeater is a buffer which has an input receiver and a driver or transmitter to resend a cleaned up version of the signal which was received. Repeaters are widely used to combat the quadratic delay of long on-chip wires. A conventional repeater is a CMOS inverter placed periodically along the long wire. This design has two drawbacks. The wire must have an even number of repeaters to preserve signal polarity. This forces the designer to sometimes use a suboptimal number of repeaters. It is also awkward when a wire branches because repeaters must be placed in such a way that all branches have an even number of repeaters. The second drawback is that many repeaters are required. For floorplanning reasons, repeaters tend to be grouped into “gas stations” which may not be immediately under the best wire route. Thus, longer wires are required to reach the gas stations. To deal with these problems, some designers have constructed repeaters from pairs of inverters. This automatically solves the polarity problem. Moreover, it may lead to fewer repeaters along the wire, since each repeater has lower input capacitance and higher output drive. This reduces the number of gas stations and extra routing required. Unfortunately, buffers are inherently slower than repeaters. This document explores the use of buffers as repeaters. It comes to a remarkably elegant conclusion showing that “optimal” buffer repeaters” are only slightly slower than “optimal” inverter repeaters.
+ 
+**Data Slew Analysis** :
+
+Slew is dependent on the value of the capacitor. The higher the value of the capacitor, the amount of charge, required to charge the capacitor will be high and the slew will be even bad.
+
+**Optimized Placement** :
+
+![image](https://user-images.githubusercontent.com/123591219/215120522-b076b064-20b4-4200-97c7-575d39ad8695.png)
 
  
+Need for libraries and characterization :
  
- Need for libraries and characterization :
+**Step 1** : Logic Synthesis (Conversion of functionality to hardware)
  
- Step 1 : Logic Synthesis (Conversion of functionality to hardware)
+This is an arrangement of Gates that will represent the original functionality, described by RTL.
  
- This is an arrangement of Gates that will represent the original functionality, described by RTL.
+**Step 2** : Floor Planning
  
- Step 2 : Floor Planning
+The output of logic synthesis is imported, and the size of the core and the die is decided based on that. Hence, the dimension of the core and die is dependent on the dimension of the output cells of the logic synthesis. 
  
- The output of logic synthesis is imported, and the size of the core and the die is decided based on that. Hence, the dimension of the core and die is dependent on the dimension of the output cells of the logic synthesis. 
+**Step 3** : Placement
  
- Step 3 : Placement
+Logic Cells are placed on the Core such that initial timing is closed. 
  
- Logic Cells are placed on the Core such that initial timing is closed. 
+**Step 4** : Clock Tree Synthesis (CTS)
  
- Step 4 : Clock Tree Synthesis (CTS)
+Here, the target is to have clocks having zero skew, to receive the clock at each cell at exact same time. Clock Buffers are added to have equal rise-fall time.
  
- Here, the target is to have clocks having zero skew, to receive the clock at each cell at exact same time. Clock Buffers are added to have equal rise-fall time.
+**Step 5** : Routing
  
- Step 5 : Routing
- 
- For routing, we need to include some properties. The routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins. Routing is related to library characterization step.
+For routing, we need to include some properties. The routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins. Routing is related to library characterization step.
  
  
-Floor planning Process for Congestion :
+**Floor planning Process for Congestion** :
 
 The first phase in the physical design process is floorplanning. The primary goal of floorplanning is to determine the best position for each module on the layout surface based on interconnectivity. One key check to make while selecting the locations is that there should be no overlap between two modules. At the floorplan stage, the designer decides the size of the die and constructs wire tracks for typical cell arrangement. A power ground connection is made, and the position of the 1/0 pad/pin is determined.
  
@@ -385,6 +392,7 @@ The first phase in the physical design process is floorplanning. The primary goa
  
  Output of the placement : 
  
+ 
  ![image](https://user-images.githubusercontent.com/123591219/215134393-ecc5907c-bfd0-49d2-b42d-2886bdec4df7.png)
 
  ![image](https://user-images.githubusercontent.com/123591219/215135346-42d9a8c0-3fe6-4498-bf6c-e5f2fe128d33.png)
@@ -392,62 +400,63 @@ The first phase in the physical design process is floorplanning. The primary goa
  ![image](https://user-images.githubusercontent.com/123591219/215135911-cf373067-45b4-458b-a651-b34f89248b28.png)
  
  
- Post Floor-Plan and Post CTS, Power Distribution Flow is executed.
+Post Floor-Plan and Post CTS, Power Distribution Flow is executed.
  
  
  
-Cell design and characterization flows
+**Cell design and characterization flows** :
  
 The different dimensions of the cells affect the thresold voltage and other components of the cells. Library consists of different cells with differenct dimensions and different functionalities. 
  
- Cell Design Flow has three stages:
+**Cell Design Flow has three stages** :
  
- ![image](https://user-images.githubusercontent.com/123591219/215145971-1dc1754d-466a-412a-b65a-91864cc01041.png)
+![image](https://user-images.githubusercontent.com/123591219/215145971-1dc1754d-466a-412a-b65a-91864cc01041.png)
 
  
- Input : Process Deign Kit (PDK)
+Input : Process Deign Kit (PDK)
  
- - DRC and LVS Rules :
+- DRC and LVS Rules :
  
- ![image](https://user-images.githubusercontent.com/123591219/215146468-476ea80f-1255-4430-bd7f-a5790e71db7f.png)
+![image](https://user-images.githubusercontent.com/123591219/215146468-476ea80f-1255-4430-bd7f-a5790e71db7f.png)
  
- - SPICE MODEL :
+- SPICE MODEL :
  
- ![image](https://user-images.githubusercontent.com/123591219/215146650-9ecbcbc2-c39e-425c-893d-cd46abb1e8c5.png)
+![image](https://user-images.githubusercontent.com/123591219/215146650-9ecbcbc2-c39e-425c-893d-cd46abb1e8c5.png)
 
  
- - Library and User Defined Specs :
+- Library and User Defined Specs :
  
- The difference between power rail and ground rail defines the Cell Height and it is the responsibility of the libraby operator to maintain this height. Cell width is dependent on the timing information, which depends on drive-strength specification. Top Level Designer determines the supply voltage and noise margin needs to be taken care based on that.
+The difference between power rail and ground rail defines the Cell Height and it is the responsibility of the libraby operator to maintain this height. Cell width is dependent on the timing information, which depends on drive-strength specification. Top Level Designer determines the supply voltage and noise margin needs to be taken care based on that.
  
- ![image](https://user-images.githubusercontent.com/123591219/215150232-f431aabf-0bf7-4d2c-bd91-97a7789d99b7.png)
+![image](https://user-images.githubusercontent.com/123591219/215150232-f431aabf-0bf7-4d2c-bd91-97a7789d99b7.png)
 
  
- Design Steps
+**Design Steps**
  
- - Circuit Design
+- Circuit Design
  
- Step 1 : Implement the function.
+Step 1 : Implement the function.
  
- Step 2 : Model the p-mos and n-mos function to meet the library model requirement.
+Step 2 : Model the p-mos and n-mos function to meet the library model requirement.
  
- ![image](https://user-images.githubusercontent.com/123591219/215151527-ff483a43-8552-4ce4-9c4c-9c2efa7341d1.png)
+ 
+![image](https://user-images.githubusercontent.com/123591219/215151527-ff483a43-8552-4ce4-9c4c-9c2efa7341d1.png)
 
  
- The output of the circuit design is Circuit Description Language [CDP].
+The output of the circuit design is Circuit Description Language [CDP].
  
  
- - Layout Design
+- Layout Design
  
- Step 1 : Implement the function into MOS Transistor.
+Step 1 : Implement the function into MOS Transistor.
  
- Step 2 : Derivation PMOS and NMOS Network Graph. Euler's Path & Stick Diagram.
+Step 2 : Derivation PMOS and NMOS Network Graph. Euler's Path & Stick Diagram.
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215158028-251bcc2d-4f91-48a5-a624-44ce6513d4e4.png)
+![image](https://user-images.githubusercontent.com/123591219/215158028-251bcc2d-4f91-48a5-a624-44ce6513d4e4.png)
 
  
- - Characterization 
+- Characterization 
  
  Step 1 : Read the models and tech files from the layout.
  
@@ -469,17 +478,17 @@ The different dimensions of the cells affect the thresold voltage and other comp
  ![image](https://user-images.githubusercontent.com/123591219/215161086-121cf306-be27-4699-9513-97ea32692a05.png)
  
  
- Characterization Software is GUNA where provide all this inputs and the output will be timing, noise, power libs and functions.
+Characterization Software is GUNA where provide all this inputs and the output will be timing, noise, power libs and functions.
  
- We have three types of characterizations.
- - Timing Characterization;
- - Power Characterization;
- - Noise Characterization;
+We have three types of characterizations.
+- Timing Characterization;
+- Power Characterization;
+- Noise Characterization;
  
  
- ![image](https://user-images.githubusercontent.com/123591219/215166014-4c7be1ee-0771-4190-afb9-27ee0dcb76f4.png)
- ![image](https://user-images.githubusercontent.com/123591219/215166202-9d261aeb-80cf-43fb-a679-3939160be575.png)
- ![image](https://user-images.githubusercontent.com/123591219/215166253-1c5e0521-7dd4-4c32-80ff-4320dcc59889.png)
+![image](https://user-images.githubusercontent.com/123591219/215166014-4c7be1ee-0771-4190-afb9-27ee0dcb76f4.png)
+![image](https://user-images.githubusercontent.com/123591219/215166202-9d261aeb-80cf-43fb-a679-3939160be575.png)
+![image](https://user-images.githubusercontent.com/123591219/215166253-1c5e0521-7dd4-4c32-80ff-4320dcc59889.png)
 
  
  - Propagation Delay
