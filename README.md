@@ -652,3 +652,42 @@ Lab steps to git clone vsdstdcelldesign
  
  
  
+ 
+Lab steps to execute OpenSTA with right timing libraries and CTS
+
+openroad
+
+read_lef /openLANE_flow/designs/picorv32a/runs/28-01_15-09/tmp/merged.lef
+
+read_def /openLANE_flow/designs/picorv32a/runs/28-01_15-09/results/cts/picorv32a.cts.def
+
+write_db pico_cts.db
+
+read_db pico_cts.db
+
+read_verilog /openLANE_flow/designs/picorv32a/runs/28-01_15-09/results/synthesis/picorv32a.synthesis_cts.v
+
+read_liberty -max $::env(LIB_SLOWEST)
+
+read_liberty -min $::env(LIB_FASTEST)
+
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+link_design picorv32a
+
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+set_propagated_clock [all_clocks]    
+
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+report_checks -path_delay min_max -field {slew trans net cap input_pin} -format full_clock_expanded -digits 4
+
+![image](https://user-images.githubusercontent.com/123591219/215314671-bf775630-334f-49e6-82c3-8d56324e092d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/123591219/215317101-5a9aa1a9-2430-48bc-b856-3b5541960d8a.png)
+
+
+
