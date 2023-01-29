@@ -728,3 +728,8 @@ ROUTING ::
 - They are on neighboring metal layers with a nonzero vertically overlapped area.
 
 - Each unconnected terminal (i.e., pin of a standard-cell instance should have its pin shape overlapped by a route guide.
+
+ 
+ Intra-Layer Parallel and Inter-Layer Sequential Panel Routing :
+ 
+ ![image](https://user-images.githubusercontent.com/123591219/215320365-27b85d45-2d14-4e40-ae2f-96a061501612.png)
