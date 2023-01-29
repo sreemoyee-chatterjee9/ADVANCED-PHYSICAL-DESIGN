@@ -67,7 +67,10 @@ ISA serves as the boundary between software and hardware. If we want to run a pr
 - Step 2 : The Assembly language program gets converted into machine language program \[Binary Format\].
 - Step 3 : Machine Language program gets executed on the Hardware \[Layout\].
 
-Interface : RISCV ISA needs to be implemented in RTL. Then the RTL2GDS Flow gets executed to run the required program on Layout.
+**Interface** : 
+
+RISCV ISA needs to be implemented in RTL. Then the RTL2GDS Flow gets executed to run the required program on Layout.
+
 ![image](https://user-images.githubusercontent.com/123591219/214822197-b91269ed-1bed-4c28-92a2-3cecbc6d4de1.png)
 
 Software Application Execution on Hardware \[Layout\]:
@@ -78,32 +81,37 @@ Instructions that come from the compiler is called abstract interface, which per
 <pre>Example : add x6, x10, x6
 After conversion to Binary ------> 00000000011001010000001100110011 </pre>
 
-RTL Implementations : It is needed to understand the hardware specific instructions. Then that RTL instruction gets synthesized into netlist which contains the Gates and other logic components. Then Viw physic design implementation, the instruction input gets implemented into hardware.
+**RTL Implementations** :
+
+It is needed to understand the hardware specific instructions. Then that RTL instruction gets synthesized into netlist which contains the Gates and other logic components. Then Viw physic design implementation, the instruction input gets implemented into hardware.
 ![image](https://user-images.githubusercontent.com/123591219/214855726-eb9770e6-dcfe-4c56-a0f0-4d27f2f4ca82.png)
 
 
-SoC Design Using OpenLANE
+**SoC Design Using OpenLANE**
 For Digital ASIC Design, we need following components:
-RTL IPs : Hardware Description Language of the fuctions
-EDA Tools/CAD Tools : Use for electronic design automation
-PDK Data : Process Design Kits. It is the interface between the FAB and the Designers. PDK contains the files of Process Design Rules, Digital Standard Cell Libraries. I/O Libraries.
+- RTL IPs : Hardware Description Language of the fuctions.
+- EDA Tools/CAD Tools : Use for electronic design automation.
+- PDK Data : Process Design Kits. It is the interface between the FAB and the Designers. PDK contains the files of Process Design Rules, Digital Standard Cell Libraries. I/O Libraries.
 
 Following are some open sources for Digital ASIC Design:
 
 ![image](https://user-images.githubusercontent.com/123591219/214861680-5ff9002a-e4eb-452f-b5a3-f0ac29b6fa22.png)
 
-Objective of ASIC Design : To take the design from register transfer level and implement it to GDSII which is the format used to final layout. This process is also known as Automated PnR/ Physical Implementation. The Steps of this Flow is as following:
+**Objective of ASIC Design** : 
+
+To take the design from register transfer level and implement it to GDSII which is the format used to final layout. This process is also known as Automated PnR/ Physical Implementation. The Steps of this Flow is as following:
+
 ![image](https://user-images.githubusercontent.com/123591219/214866786-07e5e5c0-ef55-4ae4-a819-84c060a6f871.png)
 
-1. Synthesis : Design needs to be translated into circuits made of components from Standerd Cell Library. The result of synthesis is described in HDL which known as Gate Level Netlist, equivalent to RTL. 
+**1. Synthesis** : Design needs to be translated into circuits made of components from Standerd Cell Library. The result of synthesis is described in HDL which known as Gate Level Netlist, equivalent to RTL. 
 
 ![image](https://user-images.githubusercontent.com/123591219/214868418-9ca331f5-7021-4ea9-9133-631774f72d09.png)
 
-2. Floor and Power Planning : Obective of floor and power planning is to plan the silicon area and create robus power distribution. In Floor-planning, the chip-dir is partitioned between dfferent syntem building blocks and place the I/O Pads. Macro-dimensions, pin and pad locations are defined during this stage. Reduction of resistance and IR Drop is dependent on Power Planning. 
-3. Placement : Placement of gate level netlist cells on the vertical rows. Cell placement is done in two steps Global and Detailed. Global placement finds the optimal placement of core cells. During Detailed placements, the placements done in Global placement are minimally altered.
-4. Clock Tree Synthesis : Routing of the clocks by creating the distribution network with minimum skew and minimum latency.
-5. Route : Signal Routing. During this stage, the interconnects get implemented using available metal layers. During each routing, the PDK defines the thickness, tracks, pitch, minimum width of each of the metal layers. The mental tracks form the routing grid. Routing is also dont in two steps: Global and Detailed Routing. Global Routing to create the routing guide and Detailed Routing to create the actual wiring. 
-6. SignOff : Once Routing is done, we can construct the final layout which undergoes the verifications. Following are the types of verifications:
+**2. Floor and Power Planning** : Obective of floor and power planning is to plan the silicon area and create robus power distribution. In Floor-planning, the chip-dir is partitioned between dfferent syntem building blocks and place the I/O Pads. Macro-dimensions, pin and pad locations are defined during this stage. Reduction of resistance and IR Drop is dependent on Power Planning. 
+**3. Placement** : Placement of gate level netlist cells on the vertical rows. Cell placement is done in two steps Global and Detailed. Global placement finds the optimal placement of core cells. During Detailed placements, the placements done in Global placement are minimally altered.
+**4. Clock Tree Synthesis** : Routing of the clocks by creating the distribution network with minimum skew and minimum latency.
+**5. Route** : Signal Routing. During this stage, the interconnects get implemented using available metal layers. During each routing, the PDK defines the thickness, tracks, pitch, minimum width of each of the metal layers. The mental tracks form the routing grid. Routing is also dont in two steps: Global and Detailed Routing. Global Routing to create the routing guide and Detailed Routing to create the actual wiring. 
+**6. SignOff** : Once Routing is done, we can construct the final layout which undergoes the verifications. Following are the types of verifications:
 <pre> Physical Verifications:
    * Design Rule Checking (DRC)
    * Layout vs. Schematics (LVS)
@@ -111,7 +119,7 @@ Objective of ASIC Design : To take the design from register transfer level and i
    * Static Timing Analysis (STA)
 </pre>
 
-OpenLANE
+**OpenLANE**
 OpenLANE is a tape-out-hardened flow that addresses two main use cases: hardening a macro and integrating a System-on-a-Chip (SoC). It was used successfully to tape out a family of RISC-V based SoCs known as “striVe”. This paper reviews the various components of the flow with a particular focus on the challenges that faced SoC integration while working on the first of the striVe chips and the main ideas used to overcome them, achieving full automation.
 
 Following Figure illustrates the basic default flow; this is what runs in the batch (non-interactive) mode. Most of the steps are configurable and custom flows can be created by the use of interactive scripts. The flow expects the design source HDL files as an input as well as the desired PDK source files. 
