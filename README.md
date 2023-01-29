@@ -6,6 +6,7 @@ Here, all the learnings during the workshop : [ADVANCED PHYSICAL DESIGN USING OP
 - [Introduction](#introduction)
 - [Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#day-1---inception-of-open-source-eda--openlane-and-sky130-pdk)
 - [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](#day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+- [Day 3 - Design library cell using Magic Layout and ngspice Characterization](#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
 
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC) that is built with a large number of logical processing resources, or logic blocks. These logic blocks consist of digital logic components such as multiplexers, flip-flops, lookup tables, and adders. We can divide the FPGA in three main parts: *
@@ -446,7 +447,7 @@ The different dimensions of the cells affect the thresold voltage and other comp
  ![image](https://user-images.githubusercontent.com/123591219/215171315-9da9742a-77db-44ab-8a2d-8b35e33b9d93.png)
  
  
- ## Day 3 : Design library cell using Magic Layout and ngspice characterization
+ ## Day 3 - Design library cell using Magic Layout and ngspice Characterization
  
  
  Labs for CMOS inverter ngspice simulations
